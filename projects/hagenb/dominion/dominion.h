@@ -128,4 +128,27 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
 
+/***************************************************************************************
+**        Card functions: Adventurer, Council Room, Gardens, Smithy
+**        Assignment 2
+**        Brook Hagen
+**        10/08/17
+**        Prototypes to replace functionality in switch statement in dominion.c
+***************************************************************************************/
+
+// parameters are gameState, currentPlayer, drawntreasure, cardDrawn, z
+int adventurerCard(struct gameState*, int, int, int, int);
+
+// parameters are gameState, currentPlayer, handPos
+int council_roomCard(struct gameState*, int, int);
+
+int gardensCard();
+
+//parameters are gameState, currentPlayer, handPos
+int outpostCard(struct gameState*, int, int);
+
+//parameters are gameState, currentPlayer, handPos
+int smithyCard(struct gameState*, int, int);
+
+
 #endif
