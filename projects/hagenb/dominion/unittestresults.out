@@ -1,0 +1,1221 @@
+Results for unit tests: 
+testUpdateCoins.c
+TESTING updateCoins():
+Test player 0 with 1 treasure card(s) and 0 bonus.
+G.coins = 1, expected = 1
+G.coins = 2, expected = 2
+G.coins = 3, expected = 3
+Test player 0 with 1 treasure card(s) and 1 bonus.
+G.coins = 2, expected = 2
+G.coins = 3, expected = 3
+G.coins = 4, expected = 4
+Test player 0 with 1 treasure card(s) and 2 bonus.
+G.coins = 3, expected = 3
+G.coins = 4, expected = 4
+G.coins = 5, expected = 5
+Test player 0 with 1 treasure card(s) and 3 bonus.
+G.coins = 4, expected = 4
+G.coins = 5, expected = 5
+G.coins = 6, expected = 6
+Test player 0 with 1 treasure card(s) and 4 bonus.
+G.coins = 5, expected = 5
+G.coins = 6, expected = 6
+G.coins = 7, expected = 7
+Test player 0 with 1 treasure card(s) and 5 bonus.
+G.coins = 6, expected = 6
+G.coins = 7, expected = 7
+G.coins = 8, expected = 8
+Test player 0 with 1 treasure card(s) and 6 bonus.
+G.coins = 7, expected = 7
+G.coins = 8, expected = 8
+G.coins = 9, expected = 9
+Test player 0 with 1 treasure card(s) and 7 bonus.
+G.coins = 8, expected = 8
+G.coins = 9, expected = 9
+G.coins = 10, expected = 10
+Test player 0 with 1 treasure card(s) and 8 bonus.
+G.coins = 9, expected = 9
+G.coins = 10, expected = 10
+G.coins = 11, expected = 11
+Test player 0 with 1 treasure card(s) and 9 bonus.
+G.coins = 10, expected = 10
+G.coins = 11, expected = 11
+G.coins = 12, expected = 12
+Test player 0 with 1 treasure card(s) and 10 bonus.
+G.coins = 11, expected = 11
+G.coins = 12, expected = 12
+G.coins = 13, expected = 13
+Test player 0 with 2 treasure card(s) and 0 bonus.
+G.coins = 2, expected = 2
+G.coins = 4, expected = 4
+G.coins = 6, expected = 6
+Test player 0 with 2 treasure card(s) and 1 bonus.
+G.coins = 3, expected = 3
+G.coins = 5, expected = 5
+G.coins = 7, expected = 7
+Test player 0 with 2 treasure card(s) and 2 bonus.
+G.coins = 4, expected = 4
+G.coins = 6, expected = 6
+G.coins = 8, expected = 8
+Test player 0 with 2 treasure card(s) and 3 bonus.
+G.coins = 5, expected = 5
+G.coins = 7, expected = 7
+G.coins = 9, expected = 9
+Test player 0 with 2 treasure card(s) and 4 bonus.
+G.coins = 6, expected = 6
+G.coins = 8, expected = 8
+G.coins = 10, expected = 10
+Test player 0 with 2 treasure card(s) and 5 bonus.
+G.coins = 7, expected = 7
+G.coins = 9, expected = 9
+G.coins = 11, expected = 11
+Test player 0 with 2 treasure card(s) and 6 bonus.
+G.coins = 8, expected = 8
+G.coins = 10, expected = 10
+G.coins = 12, expected = 12
+Test player 0 with 2 treasure card(s) and 7 bonus.
+G.coins = 9, expected = 9
+G.coins = 11, expected = 11
+G.coins = 13, expected = 13
+Test player 0 with 2 treasure card(s) and 8 bonus.
+G.coins = 10, expected = 10
+G.coins = 12, expected = 12
+G.coins = 14, expected = 14
+Test player 0 with 2 treasure card(s) and 9 bonus.
+G.coins = 11, expected = 11
+G.coins = 13, expected = 13
+G.coins = 15, expected = 15
+Test player 0 with 2 treasure card(s) and 10 bonus.
+G.coins = 12, expected = 12
+G.coins = 14, expected = 14
+G.coins = 16, expected = 16
+Test player 0 with 3 treasure card(s) and 0 bonus.
+G.coins = 3, expected = 3
+G.coins = 6, expected = 6
+G.coins = 9, expected = 9
+Test player 0 with 3 treasure card(s) and 1 bonus.
+G.coins = 4, expected = 4
+G.coins = 7, expected = 7
+G.coins = 10, expected = 10
+Test player 0 with 3 treasure card(s) and 2 bonus.
+G.coins = 5, expected = 5
+G.coins = 8, expected = 8
+G.coins = 11, expected = 11
+Test player 0 with 3 treasure card(s) and 3 bonus.
+G.coins = 6, expected = 6
+G.coins = 9, expected = 9
+G.coins = 12, expected = 12
+Test player 0 with 3 treasure card(s) and 4 bonus.
+G.coins = 7, expected = 7
+G.coins = 10, expected = 10
+G.coins = 13, expected = 13
+Test player 0 with 3 treasure card(s) and 5 bonus.
+G.coins = 8, expected = 8
+G.coins = 11, expected = 11
+G.coins = 14, expected = 14
+Test player 0 with 3 treasure card(s) and 6 bonus.
+G.coins = 9, expected = 9
+G.coins = 12, expected = 12
+G.coins = 15, expected = 15
+Test player 0 with 3 treasure card(s) and 7 bonus.
+G.coins = 10, expected = 10
+G.coins = 13, expected = 13
+G.coins = 16, expected = 16
+Test player 0 with 3 treasure card(s) and 8 bonus.
+G.coins = 11, expected = 11
+G.coins = 14, expected = 14
+G.coins = 17, expected = 17
+Test player 0 with 3 treasure card(s) and 9 bonus.
+G.coins = 12, expected = 12
+G.coins = 15, expected = 15
+G.coins = 18, expected = 18
+Test player 0 with 3 treasure card(s) and 10 bonus.
+G.coins = 13, expected = 13
+G.coins = 16, expected = 16
+G.coins = 19, expected = 19
+Test player 0 with 4 treasure card(s) and 0 bonus.
+G.coins = 4, expected = 4
+G.coins = 8, expected = 8
+G.coins = 12, expected = 12
+Test player 0 with 4 treasure card(s) and 1 bonus.
+G.coins = 5, expected = 5
+G.coins = 9, expected = 9
+G.coins = 13, expected = 13
+Test player 0 with 4 treasure card(s) and 2 bonus.
+G.coins = 6, expected = 6
+G.coins = 10, expected = 10
+G.coins = 14, expected = 14
+Test player 0 with 4 treasure card(s) and 3 bonus.
+G.coins = 7, expected = 7
+G.coins = 11, expected = 11
+G.coins = 15, expected = 15
+Test player 0 with 4 treasure card(s) and 4 bonus.
+G.coins = 8, expected = 8
+G.coins = 12, expected = 12
+G.coins = 16, expected = 16
+Test player 0 with 4 treasure card(s) and 5 bonus.
+G.coins = 9, expected = 9
+G.coins = 13, expected = 13
+G.coins = 17, expected = 17
+Test player 0 with 4 treasure card(s) and 6 bonus.
+G.coins = 10, expected = 10
+G.coins = 14, expected = 14
+G.coins = 18, expected = 18
+Test player 0 with 4 treasure card(s) and 7 bonus.
+G.coins = 11, expected = 11
+G.coins = 15, expected = 15
+G.coins = 19, expected = 19
+Test player 0 with 4 treasure card(s) and 8 bonus.
+G.coins = 12, expected = 12
+G.coins = 16, expected = 16
+G.coins = 20, expected = 20
+Test player 0 with 4 treasure card(s) and 9 bonus.
+G.coins = 13, expected = 13
+G.coins = 17, expected = 17
+G.coins = 21, expected = 21
+Test player 0 with 4 treasure card(s) and 10 bonus.
+G.coins = 14, expected = 14
+G.coins = 18, expected = 18
+G.coins = 22, expected = 22
+Test player 0 with 5 treasure card(s) and 0 bonus.
+G.coins = 5, expected = 5
+G.coins = 10, expected = 10
+G.coins = 15, expected = 15
+Test player 0 with 5 treasure card(s) and 1 bonus.
+G.coins = 6, expected = 6
+G.coins = 11, expected = 11
+G.coins = 16, expected = 16
+Test player 0 with 5 treasure card(s) and 2 bonus.
+G.coins = 7, expected = 7
+G.coins = 12, expected = 12
+G.coins = 17, expected = 17
+Test player 0 with 5 treasure card(s) and 3 bonus.
+G.coins = 8, expected = 8
+G.coins = 13, expected = 13
+G.coins = 18, expected = 18
+Test player 0 with 5 treasure card(s) and 4 bonus.
+G.coins = 9, expected = 9
+G.coins = 14, expected = 14
+G.coins = 19, expected = 19
+Test player 0 with 5 treasure card(s) and 5 bonus.
+G.coins = 10, expected = 10
+G.coins = 15, expected = 15
+G.coins = 20, expected = 20
+Test player 0 with 5 treasure card(s) and 6 bonus.
+G.coins = 11, expected = 11
+G.coins = 16, expected = 16
+G.coins = 21, expected = 21
+Test player 0 with 5 treasure card(s) and 7 bonus.
+G.coins = 12, expected = 12
+G.coins = 17, expected = 17
+G.coins = 22, expected = 22
+Test player 0 with 5 treasure card(s) and 8 bonus.
+G.coins = 13, expected = 13
+G.coins = 18, expected = 18
+G.coins = 23, expected = 23
+Test player 0 with 5 treasure card(s) and 9 bonus.
+G.coins = 14, expected = 14
+G.coins = 19, expected = 19
+G.coins = 24, expected = 24
+Test player 0 with 5 treasure card(s) and 10 bonus.
+G.coins = 15, expected = 15
+G.coins = 20, expected = 20
+G.coins = 25, expected = 25
+Test player 1 with 1 treasure card(s) and 0 bonus.
+G.coins = 1, expected = 1
+G.coins = 2, expected = 2
+G.coins = 3, expected = 3
+Test player 1 with 1 treasure card(s) and 1 bonus.
+G.coins = 2, expected = 2
+G.coins = 3, expected = 3
+G.coins = 4, expected = 4
+Test player 1 with 1 treasure card(s) and 2 bonus.
+G.coins = 3, expected = 3
+G.coins = 4, expected = 4
+G.coins = 5, expected = 5
+Test player 1 with 1 treasure card(s) and 3 bonus.
+G.coins = 4, expected = 4
+G.coins = 5, expected = 5
+G.coins = 6, expected = 6
+Test player 1 with 1 treasure card(s) and 4 bonus.
+G.coins = 5, expected = 5
+G.coins = 6, expected = 6
+G.coins = 7, expected = 7
+Test player 1 with 1 treasure card(s) and 5 bonus.
+G.coins = 6, expected = 6
+G.coins = 7, expected = 7
+G.coins = 8, expected = 8
+Test player 1 with 1 treasure card(s) and 6 bonus.
+G.coins = 7, expected = 7
+G.coins = 8, expected = 8
+G.coins = 9, expected = 9
+Test player 1 with 1 treasure card(s) and 7 bonus.
+G.coins = 8, expected = 8
+G.coins = 9, expected = 9
+G.coins = 10, expected = 10
+Test player 1 with 1 treasure card(s) and 8 bonus.
+G.coins = 9, expected = 9
+G.coins = 10, expected = 10
+G.coins = 11, expected = 11
+Test player 1 with 1 treasure card(s) and 9 bonus.
+G.coins = 10, expected = 10
+G.coins = 11, expected = 11
+G.coins = 12, expected = 12
+Test player 1 with 1 treasure card(s) and 10 bonus.
+G.coins = 11, expected = 11
+G.coins = 12, expected = 12
+G.coins = 13, expected = 13
+Test player 1 with 2 treasure card(s) and 0 bonus.
+G.coins = 2, expected = 2
+G.coins = 4, expected = 4
+G.coins = 6, expected = 6
+Test player 1 with 2 treasure card(s) and 1 bonus.
+G.coins = 3, expected = 3
+G.coins = 5, expected = 5
+G.coins = 7, expected = 7
+Test player 1 with 2 treasure card(s) and 2 bonus.
+G.coins = 4, expected = 4
+G.coins = 6, expected = 6
+G.coins = 8, expected = 8
+Test player 1 with 2 treasure card(s) and 3 bonus.
+G.coins = 5, expected = 5
+G.coins = 7, expected = 7
+G.coins = 9, expected = 9
+Test player 1 with 2 treasure card(s) and 4 bonus.
+G.coins = 6, expected = 6
+G.coins = 8, expected = 8
+G.coins = 10, expected = 10
+Test player 1 with 2 treasure card(s) and 5 bonus.
+G.coins = 7, expected = 7
+G.coins = 9, expected = 9
+G.coins = 11, expected = 11
+Test player 1 with 2 treasure card(s) and 6 bonus.
+G.coins = 8, expected = 8
+G.coins = 10, expected = 10
+G.coins = 12, expected = 12
+Test player 1 with 2 treasure card(s) and 7 bonus.
+G.coins = 9, expected = 9
+G.coins = 11, expected = 11
+G.coins = 13, expected = 13
+Test player 1 with 2 treasure card(s) and 8 bonus.
+G.coins = 10, expected = 10
+G.coins = 12, expected = 12
+G.coins = 14, expected = 14
+Test player 1 with 2 treasure card(s) and 9 bonus.
+G.coins = 11, expected = 11
+G.coins = 13, expected = 13
+G.coins = 15, expected = 15
+Test player 1 with 2 treasure card(s) and 10 bonus.
+G.coins = 12, expected = 12
+G.coins = 14, expected = 14
+G.coins = 16, expected = 16
+Test player 1 with 3 treasure card(s) and 0 bonus.
+G.coins = 3, expected = 3
+G.coins = 6, expected = 6
+G.coins = 9, expected = 9
+Test player 1 with 3 treasure card(s) and 1 bonus.
+G.coins = 4, expected = 4
+G.coins = 7, expected = 7
+G.coins = 10, expected = 10
+Test player 1 with 3 treasure card(s) and 2 bonus.
+G.coins = 5, expected = 5
+G.coins = 8, expected = 8
+G.coins = 11, expected = 11
+Test player 1 with 3 treasure card(s) and 3 bonus.
+G.coins = 6, expected = 6
+G.coins = 9, expected = 9
+G.coins = 12, expected = 12
+Test player 1 with 3 treasure card(s) and 4 bonus.
+G.coins = 7, expected = 7
+G.coins = 10, expected = 10
+G.coins = 13, expected = 13
+Test player 1 with 3 treasure card(s) and 5 bonus.
+G.coins = 8, expected = 8
+G.coins = 11, expected = 11
+G.coins = 14, expected = 14
+Test player 1 with 3 treasure card(s) and 6 bonus.
+G.coins = 9, expected = 9
+G.coins = 12, expected = 12
+G.coins = 15, expected = 15
+Test player 1 with 3 treasure card(s) and 7 bonus.
+G.coins = 10, expected = 10
+G.coins = 13, expected = 13
+G.coins = 16, expected = 16
+Test player 1 with 3 treasure card(s) and 8 bonus.
+G.coins = 11, expected = 11
+G.coins = 14, expected = 14
+G.coins = 17, expected = 17
+Test player 1 with 3 treasure card(s) and 9 bonus.
+G.coins = 12, expected = 12
+G.coins = 15, expected = 15
+G.coins = 18, expected = 18
+Test player 1 with 3 treasure card(s) and 10 bonus.
+G.coins = 13, expected = 13
+G.coins = 16, expected = 16
+G.coins = 19, expected = 19
+Test player 1 with 4 treasure card(s) and 0 bonus.
+G.coins = 4, expected = 4
+G.coins = 8, expected = 8
+G.coins = 12, expected = 12
+Test player 1 with 4 treasure card(s) and 1 bonus.
+G.coins = 5, expected = 5
+G.coins = 9, expected = 9
+G.coins = 13, expected = 13
+Test player 1 with 4 treasure card(s) and 2 bonus.
+G.coins = 6, expected = 6
+G.coins = 10, expected = 10
+G.coins = 14, expected = 14
+Test player 1 with 4 treasure card(s) and 3 bonus.
+G.coins = 7, expected = 7
+G.coins = 11, expected = 11
+G.coins = 15, expected = 15
+Test player 1 with 4 treasure card(s) and 4 bonus.
+G.coins = 8, expected = 8
+G.coins = 12, expected = 12
+G.coins = 16, expected = 16
+Test player 1 with 4 treasure card(s) and 5 bonus.
+G.coins = 9, expected = 9
+G.coins = 13, expected = 13
+G.coins = 17, expected = 17
+Test player 1 with 4 treasure card(s) and 6 bonus.
+G.coins = 10, expected = 10
+G.coins = 14, expected = 14
+G.coins = 18, expected = 18
+Test player 1 with 4 treasure card(s) and 7 bonus.
+G.coins = 11, expected = 11
+G.coins = 15, expected = 15
+G.coins = 19, expected = 19
+Test player 1 with 4 treasure card(s) and 8 bonus.
+G.coins = 12, expected = 12
+G.coins = 16, expected = 16
+G.coins = 20, expected = 20
+Test player 1 with 4 treasure card(s) and 9 bonus.
+G.coins = 13, expected = 13
+G.coins = 17, expected = 17
+G.coins = 21, expected = 21
+Test player 1 with 4 treasure card(s) and 10 bonus.
+G.coins = 14, expected = 14
+G.coins = 18, expected = 18
+G.coins = 22, expected = 22
+Test player 1 with 5 treasure card(s) and 0 bonus.
+G.coins = 5, expected = 5
+G.coins = 10, expected = 10
+G.coins = 15, expected = 15
+Test player 1 with 5 treasure card(s) and 1 bonus.
+G.coins = 6, expected = 6
+G.coins = 11, expected = 11
+G.coins = 16, expected = 16
+Test player 1 with 5 treasure card(s) and 2 bonus.
+G.coins = 7, expected = 7
+G.coins = 12, expected = 12
+G.coins = 17, expected = 17
+Test player 1 with 5 treasure card(s) and 3 bonus.
+G.coins = 8, expected = 8
+G.coins = 13, expected = 13
+G.coins = 18, expected = 18
+Test player 1 with 5 treasure card(s) and 4 bonus.
+G.coins = 9, expected = 9
+G.coins = 14, expected = 14
+G.coins = 19, expected = 19
+Test player 1 with 5 treasure card(s) and 5 bonus.
+G.coins = 10, expected = 10
+G.coins = 15, expected = 15
+G.coins = 20, expected = 20
+Test player 1 with 5 treasure card(s) and 6 bonus.
+G.coins = 11, expected = 11
+G.coins = 16, expected = 16
+G.coins = 21, expected = 21
+Test player 1 with 5 treasure card(s) and 7 bonus.
+G.coins = 12, expected = 12
+G.coins = 17, expected = 17
+G.coins = 22, expected = 22
+Test player 1 with 5 treasure card(s) and 8 bonus.
+G.coins = 13, expected = 13
+G.coins = 18, expected = 18
+G.coins = 23, expected = 23
+Test player 1 with 5 treasure card(s) and 9 bonus.
+G.coins = 14, expected = 14
+G.coins = 19, expected = 19
+G.coins = 24, expected = 24
+Test player 1 with 5 treasure card(s) and 10 bonus.
+G.coins = 15, expected = 15
+G.coins = 20, expected = 20
+G.coins = 25, expected = 25
+All tests passed!
+File 'dominion.c'
+Lines executed:16.34% of 557
+Branches executed:15.90% of 415
+Taken at least once:13.49% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+cardtest4.c
+----------------- Testing Card: steward ----------------
+TEST 1: choice1 = 1 = +2 cards
+hand count = 6, expected = 6
+deck count = 3, expected = 3
+coins = 4, expected = 4
+TEST 2: choice1 = 2 = +2 coins
+hand count = 4, expected = 4
+deck count = 5, expected = 5
+coins = 6, expected = 6
+TEST 3: choice1 = 3 = trash two cards
+starting cards: (18)(4)(2)(1)(9); removed: (4)(2); ending cards: (9)(1), expected: (1)(9)
+hand count = 2, expected = 2
+deck count = 5, expected = 5
+starting cards: (18)(4)(2)(1)(9); removed: (4)(1); ending cards: (2)(9), expected: (2)(9)
+starting cards: (18)(4)(2)(1)(9); removed: (4)(9); ending cards: (2)(1), expected: (2)(1)
+starting cards: (18)(4)(2)(1)(9); removed: (2)(1); ending cards: (9)(4), expected: (4)(9)
+starting cards: (18)(4)(2)(1)(9); removed: (2)(9); ending cards: (1)(4), expected: (4)(1)
+starting cards: (18)(4)(2)(1)(9); removed: (1)(9); ending cards: (2)(4), expected: (4)(2)
+
+ >>>>> SUCCESS: Testing complete steward <<<<<
+
+File 'dominion.c'
+Lines executed:21.18% of 557
+Branches executed:23.37% of 415
+Taken at least once:14.94% of 415
+Calls executed:13.83% of 94
+Creating 'dominion.c.gcov'
+
+unittest2.c
+TESTING isGameOver():
+Test #1: initialize all supply counts to 0. isGameOver should be True.
+Supply for card 0 is 0.
+Supply for card 1 is 0.
+Supply for card 2 is 0.
+Supply for card 3 is 0.
+Supply for card 4 is 0.
+Supply for card 5 is 0.
+Supply for card 6 is 0.
+Supply for card 7 is 0.
+Supply for card 8 is 0.
+Supply for card 9 is 0.
+Supply for card 10 is 0.
+Supply for card 11 is 0.
+Supply for card 12 is 0.
+Supply for card 13 is 0.
+Supply for card 14 is 0.
+Supply for card 15 is 0.
+Supply for card 16 is 0.
+Supply for card 17 is 0.
+Supply for card 18 is 0.
+Supply for card 19 is 0.
+Supply for card 20 is 0.
+Supply for card 21 is 0.
+Supply for card 22 is 0.
+Supply for card 23 is 0.
+Supply for card 24 is 0.
+Supply for card 25 is 0.
+
+isGameOver = 1, expected = 1
+
+Test#2: initialize new game with full counts for 2 players.
+isGameOver should be False.
+Supply for card 0 is 10.
+Supply for card 1 is 8.
+Supply for card 2 is 8.
+Supply for card 3 is 8.
+Supply for card 4 is 46.
+Supply for card 5 is 40.
+Supply for card 6 is 30.
+Supply for card 7 is 10.
+Supply for card 8 is 10.
+Supply for card 9 is 10.
+Supply for card 10 is 8.
+Supply for card 11 is 10.
+Supply for card 12 is 10.
+Supply for card 13 is 10.
+Supply for card 14 is 10.
+Supply for card 15 is 10.
+Supply for card 16 is 8.
+Supply for card 17 is -1.
+Supply for card 18 is -1.
+Supply for card 19 is -1.
+Supply for card 20 is -1.
+Supply for card 21 is -1.
+Supply for card 22 is -1.
+Supply for card 23 is -1.
+Supply for card 24 is -1.
+Supply for card 25 is -1.
+
+isGameOver = 0, expected = 0
+
+Test#3: set province card count to 0. isGameOver should be True.
+Supply for card province is 0.
+
+isGameOver = 1, expected = 1
+
+Test#4: initialize new game ans set each card supply = 1.
+isGameOver should be False.
+Supply for card 0 is 1.
+Supply for card 1 is 1.
+Supply for card 2 is 1.
+Supply for card 3 is 1.
+Supply for card 4 is 1.
+Supply for card 5 is 1.
+Supply for card 6 is 1.
+Supply for card 7 is 1.
+Supply for card 8 is 1.
+Supply for card 9 is 1.
+Supply for card 10 is 1.
+Supply for card 11 is 1.
+Supply for card 12 is 1.
+Supply for card 13 is 1.
+Supply for card 14 is 1.
+Supply for card 15 is 1.
+Supply for card 16 is 1.
+Supply for card 17 is 1.
+Supply for card 18 is 1.
+Supply for card 19 is 1.
+Supply for card 20 is 1.
+Supply for card 21 is 1.
+Supply for card 22 is 1.
+Supply for card 23 is 1.
+Supply for card 24 is 1.
+Supply for card 25 is 1.
+
+isGameOver = 0, expected = 0
+
+Test#5: In a loop that runs 300 times, randomly set three card
+supplies to empty. isGameOver should be True on each iteration.
+Try 1: isGameOver = 1, expected = 1
+Try 2: isGameOver = 1, expected = 1
+Try 3: isGameOver = 1, expected = 1
+Try 4: isGameOver = 1, expected = 1
+Try 5: isGameOver = 1, expected = 1
+Try 6: isGameOver = 1, expected = 1
+Try 7: isGameOver = 1, expected = 1
+Try 8: isGameOver = 1, expected = 1
+Try 9: isGameOver = 1, expected = 1
+Try 10: isGameOver = 1, expected = 1
+Try 11: isGameOver = 1, expected = 1
+Try 12: isGameOver = 1, expected = 1
+Try 13: isGameOver = 1, expected = 1
+Try 14: isGameOver = 1, expected = 1
+Try 15: isGameOver = 1, expected = 1
+Try 16: isGameOver = 1, expected = 1
+Try 17: isGameOver = 1, expected = 1
+Try 18: isGameOver = 1, expected = 1
+Try 19: isGameOver = 1, expected = 1
+Try 20: isGameOver = 1, expected = 1
+Try 21: isGameOver = 1, expected = 1
+Try 22: isGameOver = 1, expected = 1
+Try 23: isGameOver = 1, expected = 1
+Try 24: isGameOver = 1, expected = 1
+Try 25: isGameOver = 1, expected = 1
+Try 26: isGameOver = 1, expected = 1
+Try 27: isGameOver = 1, expected = 1
+Try 28: isGameOver = 1, expected = 1
+Try 29: isGameOver = 1, expected = 1
+Try 30: isGameOver = 1, expected = 1
+Try 31: isGameOver = 1, expected = 1
+Try 32: isGameOver = 1, expected = 1
+Try 33: isGameOver = 1, expected = 1
+Try 34: isGameOver = 1, expected = 1
+Try 35: isGameOver = 1, expected = 1
+Try 36: isGameOver = 1, expected = 1
+Try 37: isGameOver = 1, expected = 1
+Try 38: isGameOver = 1, expected = 1
+Try 39: isGameOver = 1, expected = 1
+Try 40: isGameOver = 1, expected = 1
+Try 41: isGameOver = 1, expected = 1
+Try 42: isGameOver = 1, expected = 1
+Try 43: isGameOver = 1, expected = 1
+Try 44: isGameOver = 1, expected = 1
+Try 45: isGameOver = 1, expected = 1
+Try 46: isGameOver = 1, expected = 1
+Try 47: isGameOver = 1, expected = 1
+Try 48: isGameOver = 1, expected = 1
+Try 49: isGameOver = 1, expected = 1
+Try 50: isGameOver = 1, expected = 1
+Try 51: isGameOver = 1, expected = 1
+Try 52: isGameOver = 1, expected = 1
+Try 53: isGameOver = 1, expected = 1
+Try 54: isGameOver = 1, expected = 1
+Try 55: isGameOver = 1, expected = 1
+Try 56: isGameOver = 1, expected = 1
+Try 57: isGameOver = 1, expected = 1
+Try 58: isGameOver = 1, expected = 1
+Try 59: isGameOver = 1, expected = 1
+Try 60: isGameOver = 1, expected = 1
+Try 61: isGameOver = 1, expected = 1
+Try 62: isGameOver = 1, expected = 1
+Try 63: isGameOver = 1, expected = 1
+Try 64: isGameOver = 1, expected = 1
+Try 65: isGameOver = 1, expected = 1
+Try 66: isGameOver = 1, expected = 1
+Try 67: isGameOver = 1, expected = 1
+Try 68: isGameOver = 1, expected = 1
+Try 69: isGameOver = 1, expected = 1
+Try 70: isGameOver = 1, expected = 1
+Try 71: isGameOver = 1, expected = 1
+Try 72: isGameOver = 1, expected = 1
+Try 73: isGameOver = 1, expected = 1
+Try 74: isGameOver = 1, expected = 1
+Try 75: isGameOver = 1, expected = 1
+Try 76: isGameOver = 1, expected = 1
+Try 77: isGameOver = 1, expected = 1
+Try 78: isGameOver = 1, expected = 1
+Try 79: isGameOver = 1, expected = 1
+Try 80: isGameOver = 1, expected = 1
+Try 81: isGameOver = 1, expected = 1
+Try 82: isGameOver = 1, expected = 1
+Try 83: isGameOver = 1, expected = 1
+Try 84: isGameOver = 1, expected = 1
+Try 85: isGameOver = 1, expected = 1
+Try 86: isGameOver = 1, expected = 1
+Try 87: isGameOver = 1, expected = 1
+Try 88: isGameOver = 1, expected = 1
+Try 89: isGameOver = 1, expected = 1
+Try 90: isGameOver = 1, expected = 1
+Try 91: isGameOver = 1, expected = 1
+Try 92: isGameOver = 1, expected = 1
+Try 93: isGameOver = 1, expected = 1
+Try 94: isGameOver = 1, expected = 1
+Try 95: isGameOver = 1, expected = 1
+Try 96: isGameOver = 1, expected = 1
+Try 97: isGameOver = 1, expected = 1
+Try 98: isGameOver = 1, expected = 1
+Try 99: isGameOver = 1, expected = 1
+Try 100: isGameOver = 1, expected = 1
+Try 101: isGameOver = 1, expected = 1
+Try 102: isGameOver = 1, expected = 1
+Try 103: isGameOver = 1, expected = 1
+Try 104: isGameOver = 1, expected = 1
+Try 105: isGameOver = 1, expected = 1
+Try 106: isGameOver = 1, expected = 1
+Try 107: isGameOver = 1, expected = 1
+Try 108: isGameOver = 1, expected = 1
+Try 109: isGameOver = 1, expected = 1
+Try 110: isGameOver = 1, expected = 1
+Try 111: isGameOver = 1, expected = 1
+Try 112: isGameOver = 1, expected = 1
+Try 113: isGameOver = 1, expected = 1
+Try 114: isGameOver = 1, expected = 1
+Try 115: isGameOver = 1, expected = 1
+Try 116: isGameOver = 1, expected = 1
+Try 117: isGameOver = 1, expected = 1
+Try 118: isGameOver = 1, expected = 1
+Try 119: isGameOver = 1, expected = 1
+Try 120: isGameOver = 1, expected = 1
+Try 121: isGameOver = 1, expected = 1
+Try 122: isGameOver = 1, expected = 1
+Try 123: isGameOver = 1, expected = 1
+Try 124: isGameOver = 1, expected = 1
+Try 125: isGameOver = 1, expected = 1
+Try 126: isGameOver = 1, expected = 1
+Try 127: isGameOver = 1, expected = 1
+Try 128: isGameOver = 1, expected = 1
+Try 129: isGameOver = 1, expected = 1
+Try 130: isGameOver = 1, expected = 1
+Try 131: isGameOver = 1, expected = 1
+Try 132: isGameOver = 1, expected = 1
+Try 133: isGameOver = 1, expected = 1
+Try 134: isGameOver = 1, expected = 1
+Try 135: isGameOver = 1, expected = 1
+Try 136: isGameOver = 1, expected = 1
+Try 137: isGameOver = 1, expected = 1
+Try 138: isGameOver = 1, expected = 1
+Try 139: isGameOver = 1, expected = 1
+Try 140: isGameOver = 1, expected = 1
+Try 141: isGameOver = 1, expected = 1
+Try 142: isGameOver = 1, expected = 1
+Try 143: isGameOver = 1, expected = 1
+Try 144: isGameOver = 1, expected = 1
+Try 145: isGameOver = 1, expected = 1
+Try 146: isGameOver = 1, expected = 1
+Try 147: isGameOver = 1, expected = 1
+Try 148: isGameOver = 1, expected = 1
+Try 149: isGameOver = 1, expected = 1
+Try 150: isGameOver = 1, expected = 1
+Try 151: isGameOver = 1, expected = 1
+Try 152: isGameOver = 1, expected = 1
+Try 153: isGameOver = 1, expected = 1
+Try 154: isGameOver = 1, expected = 1
+Try 155: isGameOver = 1, expected = 1
+Try 156: isGameOver = 1, expected = 1
+Try 157: isGameOver = 1, expected = 1
+Try 158: isGameOver = 1, expected = 1
+Try 159: isGameOver = 1, expected = 1
+Try 160: isGameOver = 1, expected = 1
+Try 161: isGameOver = 1, expected = 1
+Try 162: isGameOver = 1, expected = 1
+Try 163: isGameOver = 1, expected = 1
+Try 164: isGameOver = 1, expected = 1
+Try 165: isGameOver = 1, expected = 1
+Try 166: isGameOver = 1, expected = 1
+Try 167: isGameOver = 1, expected = 1
+Try 168: isGameOver = 1, expected = 1
+Try 169: isGameOver = 1, expected = 1
+Try 170: isGameOver = 1, expected = 1
+Try 171: isGameOver = 1, expected = 1
+Try 172: isGameOver = 1, expected = 1
+Try 173: isGameOver = 1, expected = 1
+Try 174: isGameOver = 1, expected = 1
+Try 175: isGameOver = 1, expected = 1
+Try 176: isGameOver = 1, expected = 1
+Try 177: isGameOver = 1, expected = 1
+Try 178: isGameOver = 1, expected = 1
+Try 179: isGameOver = 1, expected = 1
+Try 180: isGameOver = 1, expected = 1
+Try 181: isGameOver = 1, expected = 1
+Try 182: isGameOver = 1, expected = 1
+Try 183: isGameOver = 1, expected = 1
+Try 184: isGameOver = 1, expected = 1
+Try 185: isGameOver = 1, expected = 1
+Try 186: isGameOver = 1, expected = 1
+Try 187: isGameOver = 1, expected = 1
+Try 188: isGameOver = 1, expected = 1
+Try 189: isGameOver = 1, expected = 1
+Try 190: isGameOver = 1, expected = 1
+Try 191: isGameOver = 1, expected = 1
+Try 192: isGameOver = 1, expected = 1
+Try 193: isGameOver = 1, expected = 1
+Try 194: isGameOver = 1, expected = 1
+Try 195: isGameOver = 1, expected = 1
+Try 196: isGameOver = 1, expected = 1
+Try 197: isGameOver = 1, expected = 1
+Try 198: isGameOver = 1, expected = 1
+Try 199: isGameOver = 1, expected = 1
+Try 200: isGameOver = 1, expected = 1
+Try 201: isGameOver = 1, expected = 1
+Try 202: isGameOver = 1, expected = 1
+Try 203: isGameOver = 1, expected = 1
+Try 204: isGameOver = 1, expected = 1
+Try 205: isGameOver = 1, expected = 1
+Try 206: isGameOver = 1, expected = 1
+Try 207: isGameOver = 1, expected = 1
+Try 208: isGameOver = 1, expected = 1
+Try 209: isGameOver = 1, expected = 1
+Try 210: isGameOver = 1, expected = 1
+Try 211: isGameOver = 1, expected = 1
+Try 212: isGameOver = 1, expected = 1
+Try 213: isGameOver = 1, expected = 1
+Try 214: isGameOver = 1, expected = 1
+Try 215: isGameOver = 1, expected = 1
+Try 216: isGameOver = 1, expected = 1
+Try 217: isGameOver = 1, expected = 1
+Try 218: isGameOver = 1, expected = 1
+Try 219: isGameOver = 1, expected = 1
+Try 220: isGameOver = 1, expected = 1
+Try 221: isGameOver = 1, expected = 1
+Try 222: isGameOver = 1, expected = 1
+Try 223: isGameOver = 1, expected = 1
+Try 224: isGameOver = 1, expected = 1
+Try 225: isGameOver = 1, expected = 1
+Try 226: isGameOver = 1, expected = 1
+Try 227: isGameOver = 1, expected = 1
+Try 228: isGameOver = 1, expected = 1
+Try 229: isGameOver = 1, expected = 1
+Try 230: isGameOver = 1, expected = 1
+Try 231: isGameOver = 1, expected = 1
+Try 232: isGameOver = 1, expected = 1
+Try 233: isGameOver = 1, expected = 1
+Try 234: isGameOver = 1, expected = 1
+Try 235: isGameOver = 1, expected = 1
+Try 236: isGameOver = 1, expected = 1
+Try 237: isGameOver = 1, expected = 1
+Try 238: isGameOver = 1, expected = 1
+Try 239: isGameOver = 1, expected = 1
+Try 240: isGameOver = 1, expected = 1
+Try 241: isGameOver = 1, expected = 1
+Try 242: isGameOver = 1, expected = 1
+Try 243: isGameOver = 1, expected = 1
+Try 244: isGameOver = 1, expected = 1
+Try 245: isGameOver = 1, expected = 1
+Try 246: isGameOver = 1, expected = 1
+Try 247: isGameOver = 1, expected = 1
+Try 248: isGameOver = 1, expected = 1
+Try 249: isGameOver = 1, expected = 1
+Try 250: isGameOver = 1, expected = 1
+Try 251: isGameOver = 1, expected = 1
+Try 252: isGameOver = 1, expected = 1
+Try 253: isGameOver = 1, expected = 1
+Try 254: isGameOver = 1, expected = 1
+Try 255: isGameOver = 1, expected = 1
+Try 256: isGameOver = 1, expected = 1
+Try 257: isGameOver = 1, expected = 1
+Try 258: isGameOver = 1, expected = 1
+Try 259: isGameOver = 1, expected = 1
+Try 260: isGameOver = 1, expected = 1
+Try 261: isGameOver = 1, expected = 1
+Try 262: isGameOver = 1, expected = 1
+Try 263: isGameOver = 1, expected = 1
+Try 264: isGameOver = 1, expected = 1
+Try 265: isGameOver = 1, expected = 1
+Try 266: isGameOver = 1, expected = 1
+Try 267: isGameOver = 1, expected = 1
+Try 268: isGameOver = 1, expected = 1
+Try 269: isGameOver = 1, expected = 1
+Try 270: isGameOver = 1, expected = 1
+Try 271: isGameOver = 1, expected = 1
+Try 272: isGameOver = 1, expected = 1
+Try 273: isGameOver = 1, expected = 1
+Try 274: isGameOver = 1, expected = 1
+Try 275: isGameOver = 1, expected = 1
+Try 276: isGameOver = 1, expected = 1
+Try 277: isGameOver = 1, expected = 1
+Try 278: isGameOver = 1, expected = 1
+Try 279: isGameOver = 1, expected = 1
+Try 280: isGameOver = 1, expected = 1
+Try 281: isGameOver = 1, expected = 1
+Try 282: isGameOver = 1, expected = 1
+Try 283: isGameOver = 1, expected = 1
+Try 284: isGameOver = 1, expected = 1
+Try 285: isGameOver = 1, expected = 1
+Try 286: isGameOver = 1, expected = 1
+Try 287: isGameOver = 1, expected = 1
+Try 288: isGameOver = 1, expected = 1
+Try 289: isGameOver = 1, expected = 1
+Try 290: isGameOver = 1, expected = 1
+Try 291: isGameOver = 1, expected = 1
+Try 292: isGameOver = 1, expected = 1
+Try 293: isGameOver = 1, expected = 1
+Try 294: isGameOver = 1, expected = 1
+Try 295: isGameOver = 1, expected = 1
+Try 296: isGameOver = 1, expected = 1
+Try 297: isGameOver = 1, expected = 1
+Try 298: isGameOver = 1, expected = 1
+Try 299: isGameOver = 1, expected = 1
+Try 300: isGameOver = 1, expected = 1
+
+>>>>>>  Testing of isGameOver() complete. All tests passed! <<<<<<<
+
+File 'dominion.c'
+Lines executed:17.77% of 557
+Branches executed:17.83% of 415
+Taken at least once:14.94% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest3.c
+TESTING fullDeckCount():
+
+Test #1: For Players 1 - 4, set all card counts to zero:
+
+Player 1, card 1: count = 0, expected = 0
+Player 1, card 2: count = 0, expected = 0
+Player 1, card 3: count = 0, expected = 0
+Player 1, card 4: count = 0, expected = 0
+Player 1, card 5: count = 0, expected = 0
+Player 1, card 6: count = 0, expected = 0
+Player 1, card 7: count = 0, expected = 0
+Player 1, card 8: count = 0, expected = 0
+Player 1, card 9: count = 0, expected = 0
+Player 1, card 10: count = 0, expected = 0
+Player 1, card 11: count = 0, expected = 0
+Player 1, card 12: count = 0, expected = 0
+Player 1, card 13: count = 0, expected = 0
+Player 1, card 14: count = 0, expected = 0
+Player 1, card 15: count = 0, expected = 0
+Player 1, card 16: count = 0, expected = 0
+Player 1, card 17: count = 0, expected = 0
+Player 1, card 18: count = 0, expected = 0
+Player 1, card 19: count = 0, expected = 0
+Player 1, card 20: count = 0, expected = 0
+Player 1, card 21: count = 0, expected = 0
+Player 1, card 22: count = 0, expected = 0
+Player 1, card 23: count = 0, expected = 0
+Player 1, card 24: count = 0, expected = 0
+Player 1, card 25: count = 0, expected = 0
+Player 1, card 26: count = 0, expected = 0
+Player 2, card 1: count = 0, expected = 0
+Player 2, card 2: count = 0, expected = 0
+Player 2, card 3: count = 0, expected = 0
+Player 2, card 4: count = 0, expected = 0
+Player 2, card 5: count = 0, expected = 0
+Player 2, card 6: count = 0, expected = 0
+Player 2, card 7: count = 0, expected = 0
+Player 2, card 8: count = 0, expected = 0
+Player 2, card 9: count = 0, expected = 0
+Player 2, card 10: count = 0, expected = 0
+Player 2, card 11: count = 0, expected = 0
+Player 2, card 12: count = 0, expected = 0
+Player 2, card 13: count = 0, expected = 0
+Player 2, card 14: count = 0, expected = 0
+Player 2, card 15: count = 0, expected = 0
+Player 2, card 16: count = 0, expected = 0
+Player 2, card 17: count = 0, expected = 0
+Player 2, card 18: count = 0, expected = 0
+Player 2, card 19: count = 0, expected = 0
+Player 2, card 20: count = 0, expected = 0
+Player 2, card 21: count = 0, expected = 0
+Player 2, card 22: count = 0, expected = 0
+Player 2, card 23: count = 0, expected = 0
+Player 2, card 24: count = 0, expected = 0
+Player 2, card 25: count = 0, expected = 0
+Player 2, card 26: count = 0, expected = 0
+Player 3, card 1: count = 0, expected = 0
+Player 3, card 2: count = 0, expected = 0
+Player 3, card 3: count = 0, expected = 0
+Player 3, card 4: count = 0, expected = 0
+Player 3, card 5: count = 0, expected = 0
+Player 3, card 6: count = 0, expected = 0
+Player 3, card 7: count = 0, expected = 0
+Player 3, card 8: count = 0, expected = 0
+Player 3, card 9: count = 0, expected = 0
+Player 3, card 10: count = 0, expected = 0
+Player 3, card 11: count = 0, expected = 0
+Player 3, card 12: count = 0, expected = 0
+Player 3, card 13: count = 0, expected = 0
+Player 3, card 14: count = 0, expected = 0
+Player 3, card 15: count = 0, expected = 0
+Player 3, card 16: count = 0, expected = 0
+Player 3, card 17: count = 0, expected = 0
+Player 3, card 18: count = 0, expected = 0
+Player 3, card 19: count = 0, expected = 0
+Player 3, card 20: count = 0, expected = 0
+Player 3, card 21: count = 0, expected = 0
+Player 3, card 22: count = 0, expected = 0
+Player 3, card 23: count = 0, expected = 0
+Player 3, card 24: count = 0, expected = 0
+Player 3, card 25: count = 0, expected = 0
+Player 3, card 26: count = 0, expected = 0
+Player 4, card 1: count = 0, expected = 0
+Player 4, card 2: count = 0, expected = 0
+Player 4, card 3: count = 0, expected = 0
+Player 4, card 4: count = 0, expected = 0
+Player 4, card 5: count = 0, expected = 0
+Player 4, card 6: count = 0, expected = 0
+Player 4, card 7: count = 0, expected = 0
+Player 4, card 8: count = 0, expected = 0
+Player 4, card 9: count = 0, expected = 0
+Player 4, card 10: count = 0, expected = 0
+Player 4, card 11: count = 0, expected = 0
+Player 4, card 12: count = 0, expected = 0
+Player 4, card 13: count = 0, expected = 0
+Player 4, card 14: count = 0, expected = 0
+Player 4, card 15: count = 0, expected = 0
+Player 4, card 16: count = 0, expected = 0
+Player 4, card 17: count = 0, expected = 0
+Player 4, card 18: count = 0, expected = 0
+Player 4, card 19: count = 0, expected = 0
+Player 4, card 20: count = 0, expected = 0
+Player 4, card 21: count = 0, expected = 0
+Player 4, card 22: count = 0, expected = 0
+Player 4, card 23: count = 0, expected = 0
+Player 4, card 24: count = 0, expected = 0
+Player 4, card 25: count = 0, expected = 0
+Player 4, card 26: count = 0, expected = 0
+
+Test #2: Fill up the deck with 3 cards of each type. Place remaining cards in alternating deck and discard.
+
+
+Player 1: fullDeckCount = 18, expected deck count is 18.
+
+Player 1: fullDeckCount = 17, expected deck count is 17.
+
+Player 1: fullDeckCount = 19, expected deck count is 19.
+
+Player 1: fullDeckCount = 14, expected deck count is 14.
+
+Player 1: fullDeckCount = 27, expected deck count is 27.
+
+Player 1: fullDeckCount = 15, expected deck count is 15.
+
+Player 1: fullDeckCount = 19, expected deck count is 19.
+
+Player 1: fullDeckCount = 25, expected deck count is 25.
+
+Player 1: fullDeckCount = 18, expected deck count is 18.
+
+Player 1: fullDeckCount = 12, expected deck count is 12.
+
+Player 1: fullDeckCount = 22, expected deck count is 22.
+
+Player 1: fullDeckCount = 28, expected deck count is 28.
+
+Player 1: fullDeckCount = 28, expected deck count is 28.
+
+Player 1: fullDeckCount = 17, expected deck count is 17.
+
+Player 1: fullDeckCount = 24, expected deck count is 24.
+
+Player 1: fullDeckCount = 21, expected deck count is 21.
+
+Player 1: fullDeckCount = 14, expected deck count is 14.
+
+Player 1: fullDeckCount = 11, expected deck count is 11.
+
+Player 1: fullDeckCount = 23, expected deck count is 23.
+
+Player 1: fullDeckCount = 22, expected deck count is 22.
+
+Player 1: fullDeckCount = 18, expected deck count is 18.
+
+Player 1: fullDeckCount = 20, expected deck count is 20.
+
+Player 1: fullDeckCount = 21, expected deck count is 21.
+
+Player 1: fullDeckCount = 18, expected deck count is 18.
+
+Player 1: fullDeckCount = 26, expected deck count is 26.
+
+Player 1: fullDeckCount = 0, expected deck count is 0.
+
+Player 2: fullDeckCount = 31, expected deck count is 31.
+
+Player 2: fullDeckCount = 10, expected deck count is 10.
+
+Player 2: fullDeckCount = 21, expected deck count is 21.
+
+Player 2: fullDeckCount = 26, expected deck count is 26.
+
+Player 2: fullDeckCount = 14, expected deck count is 14.
+
+Player 2: fullDeckCount = 16, expected deck count is 16.
+
+Player 2: fullDeckCount = 29, expected deck count is 29.
+
+Player 2: fullDeckCount = 21, expected deck count is 21.
+
+Player 2: fullDeckCount = 17, expected deck count is 17.
+
+Player 2: fullDeckCount = 17, expected deck count is 17.
+
+Player 2: fullDeckCount = 26, expected deck count is 26.
+
+Player 2: fullDeckCount = 25, expected deck count is 25.
+
+Player 2: fullDeckCount = 17, expected deck count is 17.
+
+Player 2: fullDeckCount = 21, expected deck count is 21.
+
+Player 2: fullDeckCount = 23, expected deck count is 23.
+
+Player 2: fullDeckCount = 23, expected deck count is 23.
+
+Player 2: fullDeckCount = 23, expected deck count is 23.
+
+Player 2: fullDeckCount = 20, expected deck count is 20.
+
+Player 2: fullDeckCount = 24, expected deck count is 24.
+
+Player 2: fullDeckCount = 17, expected deck count is 17.
+
+Player 2: fullDeckCount = 15, expected deck count is 15.
+
+Player 2: fullDeckCount = 18, expected deck count is 18.
+
+Player 2: fullDeckCount = 16, expected deck count is 16.
+
+Player 2: fullDeckCount = 17, expected deck count is 17.
+
+Player 2: fullDeckCount = 21, expected deck count is 21.
+
+Player 2: fullDeckCount = 0, expected deck count is 0.
+
+Player 3: fullDeckCount = 23, expected deck count is 23.
+
+Player 3: fullDeckCount = 19, expected deck count is 19.
+
+Player 3: fullDeckCount = 26, expected deck count is 26.
+
+Player 3: fullDeckCount = 17, expected deck count is 17.
+
+Player 3: fullDeckCount = 24, expected deck count is 24.
+
+Player 3: fullDeckCount = 22, expected deck count is 22.
+
+Player 3: fullDeckCount = 18, expected deck count is 18.
+
+Player 3: fullDeckCount = 18, expected deck count is 18.
+
+Player 3: fullDeckCount = 14, expected deck count is 14.
+
+Player 3: fullDeckCount = 24, expected deck count is 24.
+
+Player 3: fullDeckCount = 19, expected deck count is 19.
+
+Player 3: fullDeckCount = 21, expected deck count is 21.
+
+Player 3: fullDeckCount = 20, expected deck count is 20.
+
+Player 3: fullDeckCount = 18, expected deck count is 18.
+
+Player 3: fullDeckCount = 20, expected deck count is 20.
+
+Player 3: fullDeckCount = 17, expected deck count is 17.
+
+Player 3: fullDeckCount = 18, expected deck count is 18.
+
+Player 3: fullDeckCount = 20, expected deck count is 20.
+
+Player 3: fullDeckCount = 16, expected deck count is 16.
+
+Player 3: fullDeckCount = 26, expected deck count is 26.
+
+Player 3: fullDeckCount = 16, expected deck count is 16.
+
+Player 3: fullDeckCount = 27, expected deck count is 27.
+
+Player 3: fullDeckCount = 15, expected deck count is 15.
+
+Player 3: fullDeckCount = 18, expected deck count is 18.
+
+Player 3: fullDeckCount = 25, expected deck count is 25.
+
+Player 3: fullDeckCount = 0, expected deck count is 0.
+
+Player 4: fullDeckCount = 23, expected deck count is 23.
+
+Player 4: fullDeckCount = 15, expected deck count is 15.
+
+Player 4: fullDeckCount = 22, expected deck count is 22.
+
+Player 4: fullDeckCount = 21, expected deck count is 21.
+
+Player 4: fullDeckCount = 20, expected deck count is 20.
+
+Player 4: fullDeckCount = 22, expected deck count is 22.
+
+Player 4: fullDeckCount = 15, expected deck count is 15.
+
+Player 4: fullDeckCount = 23, expected deck count is 23.
+
+Player 4: fullDeckCount = 27, expected deck count is 27.
+
+Player 4: fullDeckCount = 13, expected deck count is 13.
+
+Player 4: fullDeckCount = 24, expected deck count is 24.
+
+Player 4: fullDeckCount = 13, expected deck count is 13.
+
+Player 4: fullDeckCount = 20, expected deck count is 20.
+
+Player 4: fullDeckCount = 9, expected deck count is 9.
+
+Player 4: fullDeckCount = 19, expected deck count is 19.
+
+Player 4: fullDeckCount = 17, expected deck count is 17.
+
+Player 4: fullDeckCount = 23, expected deck count is 23.
+
+Player 4: fullDeckCount = 18, expected deck count is 18.
+
+Player 4: fullDeckCount = 19, expected deck count is 19.
+
+Player 4: fullDeckCount = 25, expected deck count is 25.
+
+Player 4: fullDeckCount = 19, expected deck count is 19.
+
+Player 4: fullDeckCount = 20, expected deck count is 20.
+
+Player 4: fullDeckCount = 15, expected deck count is 15.
+
+Player 4: fullDeckCount = 21, expected deck count is 21.
+
+Player 4: fullDeckCount = 17, expected deck count is 17.
+
+Player 4: fullDeckCount = 0, expected deck count is 0.
+
+>>>>>>  Testing of fullDeckCount() complete. All tests passed! <<<<<<<
+
+File 'dominion.c'
+Lines executed:17.59% of 557
+Branches executed:18.80% of 415
+Taken at least once:15.90% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
