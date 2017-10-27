@@ -1,0 +1,184 @@
+        -:    0:Source:unittest3.c
+        -:    0:Graph:unittest3.gcno
+        -:    0:Data:unittest3.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/***************************************************************************************
+        -:    2:** Author: Brook Hagen
+        -:    3:** Date: 10/22/17
+        -:    4:** Course: CS362 SEII
+        -:    5:** Description: Unit test #3 for Assignment #3
+        -:    6:
+        -:    7:**	Include the following in your makefile:
+        -:    8:**	
+        -:    9:**	unittest1: unittest3.c dominion.o rngs.o
+        -:   10:**		gcc -o unittest3 -g unittest3.c dominion.o rngs.o $(CFLAGS)
+        -:   11:***************************************************************************************/
+        -:   12:
+        -:   13:#include "dominion.h"
+        -:   14:#include "dominion_helpers.h"
+        -:   15:#include "interface.h"
+        -:   16:#include "rngs.h"
+        -:   17:#include <assert.h>
+        -:   18:#include <string.h>
+        -:   19:#include <stdio.h>
+        -:   20:#include <stdlib.h>
+        -:   21:#include <time.h>			//for random number generation
+        -:   22:
+        -:   23://set PRINT_OUT to 0 to remove print statements from output
+        -:   24:#define PRINT_OUT 1
+        -:   25:
+        -:   26://Test Method
+        -:   27:
+function main called 1 returned 100% blocks executed 95%
+        1:   28:int main() {
+        -:   29:	int i; 				// counter,
+        -:   30:	int count, total;	//count = card counter
+        -:   31:	int j;				//j = 0 to MAX_DECK
+        -:   32:	int pile;			// pile == 0 (hand); == 1 (deck); == 2 (discard)
+        1:   33:	int newCard = 0;			//chosen card that is added to hand, deck, or discard
+        1:   34:	int seed = 500;
+        1:   35:	int numPlayer = 2;			// players = 2 - 4
+        -:   36:	int p, newGame;	//p = # players, newGame = initializeGame
+        -:   37:	//int handCount, deckCount, discardCount; 
+        -:   38:	// handcount = 1 to 5; deckCount, discardCount = 0 to MAX_DECK
+        -:   39:
+        1:   40:	 int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, 
+        -:   41:	 	village, baron, great_hall};
+        -:   42:	struct gameState G;
+        -:   43:	int maxHandCount;
+        -:   44:	
+        -:   45:	//this works
+        1:   46:	printf("TESTING fullDeckCount():\n\n");
+call    0 returned 100%
+        -:   47:	
+        -:   48:	#if (PRINT_OUT ==1)
+        1:   49:	printf("Test #1: For Players 1 - 4, set all card counts to zero:\n\n");
+call    0 returned 100%
+        -:   50:	#endif
+        -:   51:
+        5:   52:	for (p = 0; p < MAX_PLAYERS; p++)
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:   53:	{
+      108:   54:		for (i = 0; i <= 25; i++) 
+branch  0 taken 96%
+branch  1 taken 4% (fallthrough)
+        -:   55:		{
+      104:   56:			G.handCount[p] = 0;
+      104:   57:			G.deckCount[p] = 0;
+      104:   58:			G.discardCount[p] = 0;
+      104:   59:			count = 0;
+        -:   60:			#if (PRINT_OUT ==1)
+      104:   61:				printf("Player %d, card %i: count = %d, expected = %d\n", p+1, i+1, count, fullDeckCount(p, i, &G));
+call    0 returned 100%
+call    1 returned 100%
+        -:   62:			#endif
+      104:   63:			assert(count == fullDeckCount(p, i, &G)); //check that count and fullDeckCount both = 0
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+        -:   64:
+        -:   65:		}
+        -:   66:	}
+        -:   67:	#if (PRINT_OUT ==1)
+        1:   68:	printf("\nTest #2: Fill up the deck with 3 cards of each type. Place remaining cards in alternating deck and discard.\n\n");
+call    0 returned 100%
+        -:   69:	#endif
+        -:   70:
+        1:   71:	newGame = initializeGame(numPlayer, k, seed, &G);	//initialize new game for 2 players
+call    0 returned 100%
+        5:   72:	for (p = 0; p < MAX_PLAYERS; p++)
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:   73:	{
+        4:   74:		maxHandCount = 0;
+        -:   75:		//count = 0;
+      108:   76:		for (i = 0; i <= 25; i++) 
+branch  0 taken 96%
+branch  1 taken 4% (fallthrough)
+        -:   77:		{
+        -:   78:			//G.handCount[p] = i;
+        -:   79:			// G.hand[p][G.handCount[p]] = i;
+        -:   80:			// printf("\t%d", G.hand[p][G.handCount[p]]);
+        -:   81:			// G.deckCount[p] = i;
+        -:   82:			// G.discardCount[p] = i;
+        -:   83:			// count += 3;
+        -:   84:
+      104:   85:			G.handCount[p] = 0;
+      104:   86:			G.deckCount[p] = 0;
+      104:   87:			G.discardCount[p] = 0;
+      104:   88:			count = 0;
+        -:   89:
+        -:   90:			//fill up the deck
+    52104:   91:			for (j = 0; j < MAX_DECK; j++)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -:   92:			{
+        -:   93:				//select a card from the supply
+    52000:   94:				newCard = rand() % 25;
+call    0 returned 100%
+    52000:   95:				if (newCard == i) 
+branch  0 taken 4% (fallthrough)
+branch  1 taken 96%
+        -:   96:				{
+     1986:   97:					count++;
+        -:   98:				}
+        -:   99:
+        -:  100:				//put card in one of the three piles: hand, deck, or discard
+    52000:  101:				pile = rand() % 3;
+call    0 returned 100%
+        -:  102:
+        -:  103:				//put into the hand
+    52000:  104:				if (pile == 0)
+branch  0 taken 33% (fallthrough)
+branch  1 taken 67%
+        -:  105:				{
+    17228:  106:					G.hand[p][G.handCount[p]] = newCard;
+    17228:  107:					G.handCount[p]++;
+        -:  108:				}
+        -:  109:
+        -:  110:				//put into the deck
+    34772:  111:				else if (pile == 1)
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+        -:  112:				{
+    17304:  113:					G.deck[p][G.deckCount[p]] = newCard;
+    17304:  114:					G.deckCount[p]++;
+        -:  115:				}
+        -:  116:
+        -:  117:				//put into the discard pile
+    17468:  118:				else if (pile == 2)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+        -:  119:				{
+    17468:  120:					G.discard[p][G.discardCount[p]] = newCard;
+    17468:  121:					G.discardCount[p]++;
+        -:  122:				}
+        -:  123:			}
+        -:  124:
+        -:  125:
+        -:  126:			#if (PRINT_OUT ==1)
+      104:  127:			printf("\nPlayer %d: fullDeckCount = %d, expected deck count is %d.\n", p+1, fullDeckCount(p, i, &G), count);
+call    0 returned 100%
+call    1 returned 100%
+        -:  128:			#endif
+        -:  129:
+      104:  130:			assert(count == fullDeckCount(p, i, &G)); //check that count and fullDeckCount are the same
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+        -:  131:			
+        -:  132:		
+        -:  133:		}
+        -:  134:		//printf("\t\t\tPlayer %d: fullDeckCount = %d, expected count is %d\n", p+1, fullDeckCount(p, i, &G), count);
+        -:  135:
+        -:  136:	}
+        -:  137:
+        -:  138:
+        -:  139:
+        1:  140:	printf("\n>>>>>>  Testing of fullDeckCount() complete. All tests passed! <<<<<<<\n\n");
+call    0 returned 100%
+        -:  141:}

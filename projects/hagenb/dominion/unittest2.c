@@ -45,7 +45,7 @@ int main() {
 		village, baron, great_hall};
 	struct gameState G;
 	
-	printf("TESTING isGameOver():\n");
+	printf("----------------- TESTING isGameOver(): -----------------\n");
 
 
 	//16Oct17 06:55
@@ -55,7 +55,7 @@ int main() {
 		printf("Test #1: initialize all supply counts to 0. isGameOver should be True.\n");
 		for (i = 0; i <= 25; i++) 
 		{
-			printf("Supply for card %d is %d.\n", i, G.supplyCount[i]);
+			//printf("Supply for card %d is %d.\n", i, G.supplyCount[i]);
 		}
 		printf("\nisGameOver = %d, expected = %d\n\n", isGameOver(&G), 1);
 	#endif
@@ -67,7 +67,7 @@ int main() {
 		newGame = initializeGame(numPlayer, k, seed, &G);	//initialize new game
 		for (i = 0; i <= 25; i++) 
 		{
-			printf("Supply for card %d is %d.\n", i, G.supplyCount[i]);
+			//printf("Supply for card %d is %d.\n", i, G.supplyCount[i]);
 		}
 		printf("\nisGameOver = %d, expected = %d\n\n", isGameOver(&G), 0);
 	#endif
@@ -130,5 +130,7 @@ int main() {
 	#endif
 
 	printf("\n>>>>>>  Testing of isGameOver() complete. All tests passed! <<<<<<<\n\n");
+
+	return 0;
 
 }

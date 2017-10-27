@@ -1,0 +1,208 @@
+        -:    0:Source:unittest1.c
+        -:    0:Graph:unittest1.gcno
+        -:    0:Data:unittest1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/***************************************************************************************
+        -:    2:** Author: Brook Hagen
+        -:    3:** Date: 10/22/17
+        -:    4:** Course: CS362 SEII
+        -:    5:** Description: Unit test #1 - handCard(int, struct) for Assignment #3
+        -:    6:
+        -:    7:**	Include the following in your makefile:
+        -:    8:**	
+        -:    9:**	unittest1: unittest1.c dominion.o rngs.o
+        -:   10:**		gcc -o unittest1 -g unittest1.c dominion.o rngs.o $(CFLAGS)
+        -:   11:***************************************************************************************/
+        -:   12:
+        -:   13:#include "dominion.h"
+        -:   14:#include "dominion_helpers.h"
+        -:   15:#include "interface.h"
+        -:   16:#include "rngs.h"
+        -:   17:#include <assert.h>
+        -:   18:#include <string.h>
+        -:   19:#include <stdio.h>
+        -:   20:#include <stdlib.h>
+        -:   21:
+        -:   22://set PRINT_OUT to 0 to remove print statements from output
+        -:   23:#define PRINT_OUT 1
+        -:   24:
+        -:   25://Test Method for handCard():
+function main called 1 returned 100% blocks executed 98%
+        1:   26:int main() {
+        -:   27:	int i, j;					// counter
+        1:   28:	int seed = 500;
+        1:   29:	int numPlayer = 4;		// players = 2 - 4
+        -:   30:	int newGame;			//initialize newGame
+        1:   31:	int maxBonus = 10;		//bonus cards max is 10
+        -:   32:	int p, r, handCount;	//p = # players, r = initializeGame, handcount = 0 - 5
+        1:   33:	int k[10] = {adventurer, council_room, feast, gardens, mine, remodel, smithy, 
+        -:   34:		village, baron, great_hall};
+        -:   35:	struct gameState G;
+        1:   36:	int maxHandCount = 5;
+        -:   37:
+        -:   38:	//arrays to hold maximum number of coppers, silver, and gold possible
+        -:   39:	// int coppers[MAX_HAND];
+        -:   40:	// int silvers[MAX_HAND];
+        -:   41:	// int golds[MAX_HAND];
+        -:   42:
+        -:   43:	//fill coin arrays
+        -:   44:	// for (i = 0; i < MAX_HAND; i++)
+        -:   45:	// {
+        -:   46:	// 	coppers[i] = copper;
+        -:   47:	// 	silvers[i] = silver;
+        -:   48:	// 	golds[i] = gold;
+        -:   49:	// }
+        -:   50:
+        1:   51:	printf("TESTING handCard():\n");
+call    0 returned 100%
+        -:   52:
+        -:   53:
+        -:   54:	//16Oct17 06:55
+        -:   55:	//r = initializeGame(numPlayer, k, seed, &G);
+        -:   56:	#if (PRINT_OUT ==1)
+        -:   57:
+        1:   58:		printf("\nTest #1: no cards in hand. The first card should be == 0.\n");
+call    0 returned 100%
+        5:   59:		for (i = 0; i < numPlayer; i++) 
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:   60:		{
+        4:   61:			G.handCount[i] = 0;
+        4:   62:			printf("handCard() 1 for player %d is %d, expected %d.\n", i+1, G.hand[i][0], handCard(0, &G));
+call    0 returned 100%
+call    1 returned 100%
+        -:   63:		}
+        -:   64:	#endif
+        1:   65:		assert(handCard(0, &G) == 0); //check that game is over when counts == 0
+call    0 returned 100%
+branch  1 taken 0% (fallthrough)
+branch  2 taken 100%
+call    3 never executed
+        -:   66:
+        1:   67:		newGame = initializeGame(numPlayer, k, seed, &G);
+call    0 returned 100%
+        -:   68:		//memset(&G, 17, sizeof(struct gameState));	//clear game
+        -:   69:	
+        -:   70:
+        -:   71:	#if (PRINT_OUT ==1)
+        -:   72:
+        1:   73:		printf("\nTest #2: 5 cards in hand, with all cards being gold (#6).\n");
+call    0 returned 100%
+        5:   74:		for (i = 0; i < numPlayer; i++) 
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:   75:		{
+        -:   76:			//printf("\nPlayer %d: \n", i+1);
+        -:   77:			//set each players hand to 5 cards
+        4:   78:			G.handCount[i] = maxHandCount;
+        -:   79:			//set every card in the players' hands to gold
+       24:   80:			for (j = 1; j <= maxHandCount; j++)
+branch  0 taken 83%
+branch  1 taken 17% (fallthrough)
+        -:   81:			{
+       20:   82:				G.hand[i][j] = gold;
+        -:   83:				//printf("Card %d for player %d is %d, expected %d.\n", j, i+1, G.hand[i][j], handCard(0, &G));
+        -:   84:			}
+        4:   85:			printf("Card %d for player %d is %d, expected %d.\n", j-1, i, G.hand[i][j-1], handCard(j-1, &G));
+call    0 returned 100%
+call    1 returned 100%
+        -:   86:		}
+        -:   87:	#endif	
+        -:   88:
+        1:   89:	memset(&G, 17, sizeof(struct gameState));	//clear game
+        1:   90:	newGame = initializeGame(numPlayer, k, seed, &G);
+call    0 returned 100%
+        -:   91:
+        -:   92:	#if (PRINT_OUT ==1)
+        -:   93:
+        1:   94:		printf("\nTest #3: 5 cards in hand, with all cards being treasure_map (#26).\n");
+call    0 returned 100%
+        5:   95:		for (i = 0; i < numPlayer; i++) 
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:   96:		{
+        -:   97:			// printf("\nPlayer %d: \n", i+1);
+        -:   98:			//set each players hand to 5 cards
+        4:   99:			G.handCount[i] = maxHandCount;
+        -:  100:			//set every card in the players' hands to gold
+       24:  101:			for (j = 1; j <= maxHandCount; j++)
+branch  0 taken 83%
+branch  1 taken 17% (fallthrough)
+        -:  102:			{
+       20:  103:				G.hand[i][j] = treasure_map;
+       20:  104:				printf("\tCard %d for player %d is %d, expected %d.\n", j, i+1, G.hand[i][j], handCard(j, &G));
+call    0 returned 100%
+call    1 returned 100%
+        -:  105:			}
+        4:  106:			printf("Card %d for player %d is %d, expected %d.\n", j-1, i, G.hand[i][j-1], handCard(j-1, &G));
+call    0 returned 100%
+call    1 returned 100%
+        -:  107:		}
+        -:  108:	#endif	
+        -:  109:
+        1:  110:	memset(&G, 17, sizeof(struct gameState));	//clear game
+        1:  111:	newGame = initializeGame(numPlayer, k, seed, &G);
+call    0 returned 100%
+        -:  112:
+        -:  113:	#if (PRINT_OUT ==1)
+        -:  114:
+        1:  115:		printf("\n\nTest #4: 5 cards in hand.\n");
+call    0 returned 100%
+        1:  116:		printf("\tPlayer 1: cards 5, 6, 7, 8, 9)\n ");
+call    0 returned 100%
+        1:  117:		printf("\tPlayer 2: cards 6, 8, 10, 12, 14\n");
+call    0 returned 100%
+        1:  118:		printf("\tPlayer 3: cards 7, 10, 13, 16, 19)\n");
+call    0 returned 100%
+        1:  119:		printf("\tPlayer 4: cards 8, 12, 16, 20, 24)\n");
+call    0 returned 100%
+        -:  120:
+        -:  121:		
+        5:  122:		for (i = 0; i < numPlayer; i++) 
+branch  0 taken 80%
+branch  1 taken 20% (fallthrough)
+        -:  123:		{
+        4:  124:			printf("\nPlayer %d: \n", i+1);
+call    0 returned 100%
+        -:  125:			//set each players hand to 5 cards
+        -:  126:			//G.handCount[i] = maxHandCount;
+        -:  127:			//set every card in the players' hands 
+       24:  128:			for (j = 1; j <= maxHandCount; j++)
+branch  0 taken 83%
+branch  1 taken 17% (fallthrough)
+        -:  129:			{
+       20:  130:				G.hand[i][j] = ((i+1) * j) + 4;
+       20:  131:				printf("\tCard %d for player %d is %d, expected %d.  ", j, i+1, G.hand[i][j], handCard(j, &G));
+call    0 returned 100%
+call    1 returned 100%
+       20:  132:				if (G.hand[i][j] == handCard(j, &G))
+call    0 returned 100%
+branch  1 taken 25% (fallthrough)
+branch  2 taken 75%
+        5:  133:					printf("PASS\n");
+call    0 returned 100%
+        -:  134:				else
+       15:  135:					printf("FAIL\n");
+call    0 returned 100%
+        -:  136:			}
+        4:  137:			printf("Card %d for player %d is %d, expected %d.\n", j-1, i+1, G.hand[i][j-1], handCard(j-1, &G));
+call    0 returned 100%
+call    1 returned 100%
+        4:  138:			if (G.hand[i][j-1] == handCard(j-1, &G))
+call    0 returned 100%
+branch  1 taken 25% (fallthrough)
+branch  2 taken 75%
+        1:  139:				printf("PASS\n");
+call    0 returned 100%
+        -:  140:			else
+        3:  141:				printf("FAIL\n");
+call    0 returned 100%
+        -:  142:			
+        -:  143:		}
+        -:  144:	#endif	
+        -:  145:
+        1:  146:	printf("\n>>>>>>  Testing of handCard() complete. All tests passed! <<<<<<<\n\n");
+call    0 returned 100%
+        -:  147:
+        -:  148:}

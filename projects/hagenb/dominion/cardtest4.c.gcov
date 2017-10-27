@@ -1,0 +1,122 @@
+        -:    0:Source:cardtest4.c
+        -:    0:Graph:cardtest4.gcno
+        -:    0:Data:cardtest4.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/***************************************************************************************
+        -:    2:** Author: Brook Hagen
+        -:    3:** Date: 10/22/17
+        -:    4:** Course: CS362 SEII
+        -:    5:** Description: card test #4 for Assignment #3
+        -:    6:**	int adventurerCard(struct gameState *state, int currentPlayer, int drawntreasure, int cardDrawn, int z) 
+        -:    7:
+        -:    8:**	Include the following in your makefile:
+        -:    9:**	
+        -:   10:**	cardtest4: cardtest4.c dominion.o rngs.o
+        -:   11:**		gcc -o cardtest4 -g cardtest4.c dominion.o rngs.o $(CFLAGS)
+        -:   12:***************************************************************************************/
+        -:   13:
+        -:   14:#include "dominion.h"
+        -:   15:#include "dominion_helpers.h"
+        -:   16:#include <string.h>
+        -:   17:#include <stdio.h>
+        -:   18:#include <assert.h>
+        -:   19:#include "rngs.h"
+        -:   20:#include <stdlib.h>
+        -:   21:
+        -:   22:#define TESTCARD "adventurer"
+        -:   23:
+function pass called 4 returned 100% blocks executed 100%
+        4:   24:void pass(int actual, int result)
+        -:   25:{
+        4:   26:	if (actual == result)
+branch  0 taken 75% (fallthrough)
+branch  1 taken 25%
+        -:   27:	{
+        3:   28:		printf("PASS\n");
+call    0 returned 100%
+        -:   29:	}
+        -:   30:	else
+        1:   31:		printf("FAIL\n");
+call    0 returned 100%
+        4:   32:}
+        -:   33:
+function main called 1 returned 100% blocks executed 100%
+        1:   34:int main() 
+        -:   35:{
+        -:   36:	int golds, silvers, coppers;			//counters
+        -:   37:	int testGolds, testSilvers, testCoppers;
+        1:   38:	int seed = 500;
+        1:   39:	int numPlayers = 2;
+        1:   40:	int thisPlayer = 0;
+        1:   41:	int handPos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+        -:   42:	struct gameState G, testG;
+        1:   43:	int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+        -:   44:			sea_hag, tribute, smithy, council_room};
+        -:   45:	// initialize a game state and player cards
+        1:   46:	initializeGame(numPlayers, k, seed, &G);
+call    0 returned 100%
+        -:   47:
+        1:   48:	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
+call    0 returned 100%
+        -:   49:
+        -:   50:	// ----------- TEST 1: verify that two cards are drawn --------------
+        1:   51:	printf("TEST 1: Verify that two cards are drawn and added to hand\n");
+call    0 returned 100%
+        -:   52:
+        -:   53:	// copy the game state to a test case
+        1:   54:	memcpy(&testG, &G, sizeof(struct gameState));
+        1:   55:	cardEffect(steward, choice1, choice2, choice3, &testG, handPos, &bonus);
+call    0 returned 100%
+        -:   56:
+        -:   57:	//G.drawntreasure = 2;
+        1:   58:	G.handCount[thisPlayer] =+2;
+        -:   59:
+        1:   60:	printf("\tHand count = %d, expected %d\t", testG.handCount[thisPlayer], G.handCount[thisPlayer]);
+call    0 returned 100%
+        1:   61:	pass(testG.handCount[thisPlayer], G.handCount[thisPlayer]);
+call    0 returned 100%
+        -:   62:
+        -:   63:
+        -:   64:	// ----------- TEST 1: verify treasure count --------------
+        1:   65:	printf("\nTEST 2: Verify that treasure count is equal.\n");
+call    0 returned 100%
+        -:   66:
+        -:   67:	// copy the game state to a test case
+        1:   68:	memcpy(&testG, &G, sizeof(struct gameState));
+        1:   69:	cardEffect(steward, choice1, choice2, choice3, &testG, handPos, &bonus);
+call    0 returned 100%
+        -:   70:
+        1:   71:	golds = fullDeckCount(thisPlayer, 6, &G);
+call    0 returned 100%
+        1:   72:	silvers = fullDeckCount(thisPlayer, 5, &G);
+call    0 returned 100%
+        1:   73:	coppers = fullDeckCount(thisPlayer, 4, &G);
+call    0 returned 100%
+        -:   74:
+        1:   75:	testGolds = fullDeckCount(thisPlayer, 6, &testG);
+call    0 returned 100%
+        1:   76:	testSilvers = fullDeckCount(thisPlayer, 5, &testG);
+call    0 returned 100%
+        1:   77:	testCoppers = fullDeckCount(thisPlayer, 4, &testG);
+call    0 returned 100%
+        -:   78:
+        1:   79:	printf("Golds = %d, expected = %d\t", golds, testGolds);
+call    0 returned 100%
+        1:   80:	pass(golds, testGolds);
+call    0 returned 100%
+        1:   81:	printf("Silvers = %d, expected = %d\t", silvers, testSilvers);
+call    0 returned 100%
+        1:   82:	pass(silvers, testSilvers);
+call    0 returned 100%
+        1:   83:	printf("Coppers = %d, expected = %d\t", coppers, testCoppers);
+call    0 returned 100%
+        1:   84:	pass(coppers, testCoppers);
+call    0 returned 100%
+        -:   85:	
+        -:   86:
+        1:   87:	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
+call    0 returned 100%
+        -:   88:
+        1:   89:	return 0;
+        -:   90:}
