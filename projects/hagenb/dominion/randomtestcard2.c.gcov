@@ -1,0 +1,309 @@
+        -:    0:Source:randomtestcard2.c
+        -:    0:Graph:randomtestcard2.gcno
+        -:    0:Data:randomtestcard2.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/***************************************************************************************
+        -:    2:** Author: Brook Hagen
+        -:    3:** Date: 10/22/17
+        -:    4:** Course: CS362 SEII
+        -:    5:** Description: random test #2 for Assignment #4
+        -:    6:**	smithyCard(struct gameState *state, int currentPlayer, int handPos) 
+        -:    7:
+        -:    8:**	Include the following in your makefile:
+        -:    9:**	
+        -:   10:**	randomtestcard2: randomtestcard2.c dominion.o rngs.o
+        -:   11:**		gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+        -:   12:***************************************************************************************/
+        -:   13:
+        -:   14:#include "dominion.h"
+        -:   15:#include "dominion_helpers.h"
+        -:   16:#include <string.h>
+        -:   17:#include <stdio.h>
+        -:   18:#include <assert.h>
+        -:   19:#include "rngs.h"
+        -:   20:#include <stdlib.h>
+        -:   21:#include <time.h>
+        -:   22:
+        -:   23:#define TESTCARD "smithy"
+        -:   24:
+function pass called 20 returned 100% blocks executed 75%
+       20:   25:void pass(int actual, int result)
+        -:   26:{
+       20:   27:	if (actual == result)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   28:	{
+    #####:   29:		printf("PASS\n");
+call    0 never executed
+        -:   30:	}
+        -:   31:	else
+       20:   32:		printf("FAIL\n");
+call    0 returned 100%
+       20:   33:}
+        -:   34:
+        -:   35:/************************************************************************************
+        -:   36:  Function: getNumPlayers
+        -:   37:  Parameters: none
+        -:   38:  Returns: int n, the number of players for the game
+        -:   39:  Description:
+        -:   40:  Calling the getNumPlayers() function will select the number of players for the
+        -:   41:  game, at random, between 2 and 4.
+        -:   42:************************************************************************************/
+function getNumPlayers called 21 returned 100% blocks executed 100%
+       21:   43:int getNumPlayers()
+        -:   44:{
+        -:   45:	//randomly produce number of players between 2 and 4
+       21:   46:	int n = (rand() % 3) + 2;
+call    0 returned 100%
+       21:   47:	return n;
+        -:   48:}
+        -:   49:
+        -:   50:/************************************************************************************
+        -:   51:  Function: getSeed
+        -:   52:  Parameters: none
+        -:   53:  Returns: int s
+        -:   54:  Description:
+        -:   55:  Calling the getSeed() function will select a random number between 1 and 5000,
+        -:   56:  which will be the seed number for the initializeGame() function.
+        -:   57:************************************************************************************/
+function getSeed called 21 returned 100% blocks executed 100%
+       21:   58:int getSeed()
+        -:   59:{
+        -:   60:	//randomly produce seed number between 1 and 5000.
+       21:   61:	int s = rand() % 5001;
+call    0 returned 100%
+       21:   62:	return s;
+        -:   63:}
+        -:   64:
+        -:   65:/************************************************************************************
+        -:   66:  Function: getThisPlayer(int numPlayer)
+        -:   67:  Parameters: int number of players
+        -:   68:  Returns: int p - the player of concern (thisPlayer)
+        -:   69:  Description:
+        -:   70:  Calling the getThisPlayer() function will select a random player from the current,
+        -:   71:  number of players, which will be used to verify the discard function.
+        -:   72:************************************************************************************/
+function getThisPlayer called 21 returned 100% blocks executed 100%
+       21:   73:int getThisPlayer(int n)
+        -:   74:{
+        -:   75:	//randomly select player based on number of players
+       21:   76:	int p = (rand() % n);
+call    0 returned 100%
+       21:   77:	return p;
+        -:   78:}
+        -:   79:
+        -:   80:/************************************************************************************
+        -:   81:  Function: getHandPos
+        -:   82:  Parameters: none
+        -:   83:  Returns: int h
+        -:   84:  Description:
+        -:   85:  Calling the getHandPos() function will select a random number between 0 and 4,
+        -:   86:  which will represent the hand position of a particular card. Note that a hand has
+        -:   87:  between 1 and 5 cards at positions 0 - 4.
+        -:   88:************************************************************************************/
+function getHandPos called 21 returned 100% blocks executed 100%
+       21:   89:int getHandPos()
+        -:   90:{
+        -:   91:	//randomly produce number between 0 and 4.
+       21:   92:	int h = rand() % 5;
+call    0 returned 100%
+       21:   93:	return h;
+        -:   94:}
+        -:   95:
+        -:   96:/************************************************************************************
+        -:   97:  Function: getBonus
+        -:   98:  Parameters: none
+        -:   99:  Returns: int b
+        -:  100:  Description:
+        -:  101:  Calling the getBonus() function will select a random number between 0 and 10,
+        -:  102:  which will represent coin bonus.
+        -:  103:************************************************************************************/
+function getBonus called 21 returned 100% blocks executed 100%
+       21:  104:int getBonus()
+        -:  105:{
+        -:  106:	//randomly produce seed number between 0 and 10.
+       21:  107:	int b = rand() % 11;
+call    0 returned 100%
+       21:  108:	return b;
+        -:  109:}
+        -:  110:
+function main called 1 returned 100% blocks executed 100%
+        1:  111:int main() 
+        -:  112:{
+        -:  113:	//seed the random number generator
+        1:  114:	srand(time(NULL));
+call    0 returned 100%
+call    1 returned 100%
+        -:  115:	int i;			//counters
+        -:  116:	int seed;
+        1:  117:	int num_tests = 10; //10000;			//run the test 10,000 times
+        -:  118:
+        -:  119:	int numPlayers;
+        -:  120:	int thisPlayer;
+        1:  121:	int handPos, choice1 = 0, choice2 = 0, choice3 = 0, bonus;
+        -:  122:	struct gameState G, testG;
+        1:  123:	int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
+        -:  124:			sea_hag, tribute, smithy, council_room};
+        -:  125:	
+        -:  126:	// initialize a game state and player cards
+        1:  127:	numPlayers = getNumPlayers();
+call    0 returned 100%
+        1:  128:	seed = getSeed();
+call    0 returned 100%
+        1:  129:	thisPlayer = getThisPlayer(numPlayers);
+call    0 returned 100%
+        1:  130:	bonus = getBonus();
+call    0 returned 100%
+        1:  131:	handPos = getHandPos();
+call    0 returned 100%
+        1:  132:	initializeGame(numPlayers, k, seed, &G);
+call    0 returned 100%
+        -:  133:
+        -:  134:	//time the tests
+        -:  135:	clock_t t1, t2, totalT;
+        -:  136:
+        1:  137:	printf("----------------- Random Test for Card: %s ----------------\n", TESTCARD);
+call    0 returned 100%
+        -:  138:
+        -:  139:	//start timers for test 1 and both tests together
+        1:  140:	t1 = clock();
+call    0 returned 100%
+        1:  141:	totalT = clock();
+call    0 returned 100%
+        -:  142:
+        -:  143:	//all the functions here are working
+       11:  144:	for (i = 0; i < (num_tests); i++)
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+        -:  145:	{
+        -:  146:		// ----------- TEST 1: outpostPlayed flag is set --------------
+       10:  147:		if (i == 0)
+branch  0 taken 10% (fallthrough)
+branch  1 taken 90%
+        -:  148:		// ----------- TEST 1: verify that 3 cards were drawn --------------
+        1:  149:		printf("\nTest #1: verify that three cards were drawn.\n");
+call    0 returned 100%
+        -:  150:
+       10:  151:		numPlayers = getNumPlayers();
+call    0 returned 100%
+       10:  152:		seed = getSeed();
+call    0 returned 100%
+       10:  153:		thisPlayer = getThisPlayer(numPlayers);
+call    0 returned 100%
+       10:  154:		bonus = getBonus();
+call    0 returned 100%
+       10:  155:		handPos = getHandPos();
+call    0 returned 100%
+        -:  156:
+        -:  157:		// copy the game state to a test case
+       10:  158:		memcpy(&testG, &G, sizeof(struct gameState));
+        -:  159:
+        -:  160:		//call cardEffect, so that this will work whether function is separated out or not
+       10:  161:		cardEffect(smithy, choice1, choice2, choice3, &testG, handPos, &bonus);
+call    0 returned 100%
+        -:  162:
+       10:  163:		printf("\tHandCount for this player: %d\n", testG.handCount[thisPlayer]+1);
+call    0 returned 100%
+       10:  164:		printf("\tCards drawn = %d, expected = %d\t", testG.handCount[thisPlayer]+1 - 5, 3);
+call    0 returned 100%
+       10:  165:		pass(testG.handCount[thisPlayer]+1 - 5, 3);
+call    0 returned 100%
+        -:  166:
+       10:  167:		printf("Number of players is %d, seed is %d, thisPlayer is %d, bonus is %d, handPos is %d\n", numPlayers, seed, thisPlayer, bonus, handPos);
+call    0 returned 100%
+        -:  168:	}
+        -:  169:
+        -:  170:	//get the execution time and print it:
+        1:  171:	t1 = clock() - t1;
+call    0 returned 100%
+        1:  172:	double t1_taken = ((double)t1)/CLOCKS_PER_SEC; 	//Time in seconds
+        1:  173:	printf("\n Test 1 time: %f.\n", t1_taken);
+call    0 returned 100%
+        -:  174:
+        1:  175:	printf("\n\t>> Test #1 is COMPLETE. <<\n");
+call    0 returned 100%
+        -:  176:	
+        1:  177:	t2 = clock();
+call    0 returned 100%
+        -:  178:
+       11:  179:	for (i = 0; i < num_tests; i++)
+branch  0 taken 91%
+branch  1 taken 9% (fallthrough)
+        -:  180:	{
+        -:  181:
+        -:  182:	// ----------- TEST 2: verify that card at handPos is discarded -------------- //
+        -:  183:		// Function signature for discardCard():
+        -:  184:		//	discardCard(handPos, currentPlayer, state, 0);
+        -:  185:  			
+       10:  186:		if (i == 0)
+branch  0 taken 10% (fallthrough)
+branch  1 taken 90%
+        1:  187:			printf("\nTest #2: calling smithy() will trigger the discardCard() function.\n");
+call    0 returned 100%
+        -:  188:
+       10:  189:		numPlayers = getNumPlayers();
+call    0 returned 100%
+       10:  190:		seed = getSeed();
+call    0 returned 100%
+       10:  191:		thisPlayer = getThisPlayer(numPlayers);
+call    0 returned 100%
+       10:  192:		bonus = getBonus();
+call    0 returned 100%
+       10:  193:		handPos = getHandPos();
+call    0 returned 100%
+        -:  194:		
+        -:  195:		// copy the game state to a test case
+       10:  196:		memcpy(&testG, &G, sizeof(struct gameState));
+        -:  197:
+        -:  198:		//call cardEffect, so that this will work whether function is separated out or not
+       10:  199:		cardEffect(smithy, choice1, choice2, choice3, &testG, handPos, &bonus);
+call    0 returned 100%
+        -:  200:		
+        -:  201:		//this lastCard is working for the test case.
+        -:  202:		//need to get last card for control case    03Nov17 16:14
+        -:  203:		//int lastCard = numHandCards(&testG);
+        -:  204:		//printf("\tThe last card is at position %d\n", lastCard);
+       10:  205:		printf("\tThe card at the last handPos should be discarded, ie, == -1\n");
+call    0 returned 100%
+       10:  206:		printf("\tCard at handPos %d = %d, expected = %d\t", handPos, testG.hand[thisPlayer][handPos], -1);
+call    0 returned 100%
+       10:  207:		pass(testG.hand[thisPlayer][handPos], -1);
+call    0 returned 100%
+        -:  208:
+       68:  209:		for (handPos = 0; handPos <= testG.handCount[thisPlayer]; handPos++)
+branch  0 taken 85%
+branch  1 taken 15% (fallthrough)
+        -:  210:		{
+       58:  211:			printf("\t\tCard at position %d is ID %d\n", handPos, testG.hand[thisPlayer][handPos]);
+call    0 returned 100%
+        -:  212:		}
+        -:  213:
+       10:  214:		printf("\n\n");
+call    0 returned 100%
+        -:  215:	}
+        -:  216:
+        -:  217:	//get the execution time and print it:
+        1:  218:	t2 = clock() - t2;
+call    0 returned 100%
+        1:  219:	double t2_taken = ((double)t2)/CLOCKS_PER_SEC; 	//Time in seconds
+        1:  220:	printf("\n Test 2 time: %f.\n", t2_taken);
+call    0 returned 100%
+        -:  221:
+        1:  222:	printf("\n\t >> Test #2 is COMPLETE. << \n");
+call    0 returned 100%
+        -:  223:
+        -:  224:	//get the execution time and print it:
+        1:  225:	totalT = clock() - totalT;
+call    0 returned 100%
+        1:  226:	double total_taken = ((double)totalT)/CLOCKS_PER_SEC; 	//Time in seconds
+        1:  227:	printf("\n Total testing time: %f.\n", total_taken);
+call    0 returned 100%
+        -:  228:
+        1:  229:	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
+call    0 returned 100%
+        -:  230:
+        -:  231:	
+        -:  232:
+        1:  233:	return 0;
+        -:  234:}

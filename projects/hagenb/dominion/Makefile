@@ -31,108 +31,53 @@ testAll: dominion.o testSuite.c
 interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
-runtests: testDrawCard 
-	./testDrawCard &> unittestresults.out
-	gcov dominion.c >> unittestresults.out
-	cat dominion.c.gcov >> unittestresults.out
+# runtests: testDrawCard 
+# 	./testDrawCard &> unittestresults.out
+# 	gcov dominion.c >> unittestresults.out
+# 	cat dominion.c.gcov >> unittestresults.out
 
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom player testDrawCard testBuyCard badTestDrawCard cardtest1 cardtest2 cardtest3 cardtest4 unittest1 unittest2 unittest3
+all: playdom player testDrawCard testBuyCard badTestDrawCard randomtestcard1 randomtestcard2 randomtestadventurer
 
 
-# Unit test commands:
-#sample from class:
-#testUpdateCoins: testUpdateCoins.c dominion.o rngs.o
-#	gcc -o testUpdateCoins -g testUpdateCoins.c dominion.o rngs.o $(CFLAGS)
 
-#Card unit tests for Assignment 3:
+# Random tests for Assignment 4:
 
-cardtest1: cardtest1.c dominion.o rngs.o interface.o
-	gcc -o cardtest1 cardtest1.c -g dominion.o rngs.o interface.o $(CFLAGS)
+randomtestcard1: randomtestcard1.c dominion.o rngs.o
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o rngs.o interface.o $(CFLAGS)
 
-cardtest2: cardtest2.c dominion.o rngs.o interface.o
-	gcc -o cardtest2 cardtest2.c -g dominion.o rngs.o interface.o $(CFLAGS)
+randomtestcard2: randomtestcard2.c dominion.o rngs.o
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o rngs.o interface.o $(CFLAGS)
 
-cardtest3: cardtest3.c dominion.o rngs.o interface.o
-	gcc -o cardtest3 cardtest3.c -g dominion.o rngs.o interface.o $(CFLAGS)
+randomtestadventurer: randomtestadventurer.c dominion.o rngs.o
+	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.o rngs.o interface.o $(CFLAGS)
 
-cardtest4: cardtest4.c dominion.o rngs.o interface.o
-	gcc -o cardtest4 cardtest4.c -g dominion.o rngs.o interface.o $(CFLAGS)
 
-#Unit tests for Assignment 3:
-unittest1: unittest1.c dominion.o rngs.o
-	gcc -o unittest1 unittest1.c -g dominion.o rngs.o interface.o $(CFLAGS)
-
-unittest2: unittest2.c dominion.o rngs.o
-	gcc -o unittest2 unittest2.c -g dominion.o rngs.o interface.o $(CFLAGS)
-
-unittest3: unittest3.c dominion.o rngs.o
-	gcc -o unittest3 unittest3.c -g dominion.o rngs.o interface.o $(CFLAGS)
-
-unittest4: unittest4.c dominion.o rngs.o
-	gcc -o unittest4 unittest4.c -g dominion.o rngs.o interface.o $(CFLAGS)
-
-# Create .out file for unit tests:
-# Command: make unittestresults.out <Enter>
-unittestresults.out: cardtest4.c unittest1.c unittest2.c unittest3.c unittest4.c dominion.c rngs.o interface.o
-	echo "Results for unit tests: " > unittestresults.out
-
-	# echo "testUpdateCoins.c" >> unittestresults.out
-	# gcc -o testUpdateCoins testUpdateCoins.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	# ./testUpdateCoins >> unittestresults.out
-	# gcov -b dominion.c >> unittestresults.out
+# Create .out file for random tests:
+# Command: make randomtestresults.out <Enter>
+randomtestresults.out: randomtestcard1.c randomtestcard2.c randomtestadventurer.c dominion.c rngs.o interface.o
+	echo "Results for random testing: " > randomtestresults.out
 
 # outpostCard
-	echo "cardtest1.c" >> unittestresults.out
-	gcc -o cardtest1 cardtest1.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./cardtest1 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
-# gardensCard
-	echo "cardtest2.c" >> unittestresults.out
-	gcc -o cardtest2 cardtest2.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./cardtest2 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
+	echo "randomtestcard1.c" >> randomtestresults.out
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestcard1 >> randomtestresults.out
+	gcov -b dominion.c >> randomtestresults.out
 
 # smithyCard
-	echo "cardtest3.c" >> unittestresults.out
-	gcc -o cardtest3 cardtest3.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./cardtest3 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
+	echo "randomtestcard2.c" >> randomtestresults.out
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestcard2 >> randomtestresults.out
+	gcov -b dominion.c >> randomtestresults.out
 
-# adventurer card
-	echo "cardtest4.c" >> unittestresults.out
-	gcc -o cardtest4 cardtest4.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./cardtest4 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
-# handCard
-	echo "unittest1.c" >> unittestresults.out
-	gcc -o  unittest1 unittest1.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./unittest1 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
-# gameIsOver
-	echo "unittest2.c" >> unittestresults.out
-	gcc -o  unittest2 unittest2.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./unittest2 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
-# fullDeckCount
-	echo "unittest3.c" >> unittestresults.out
-	gcc -o  unittest3 unittest3.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./unittest3 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
-# getCost
-	echo "unittest4.c" >> unittestresults.out
-	gcc -o  unittest4 unittest4.c -g dominion.c rngs.o interface.o $(CFLAGS)
-	./unittest4 >> unittestresults.out
-	gcov -b dominion.c >> unittestresults.out
-
+# adventurerCard
+	echo "randomtestadventurer.c" >> randomtestresults.out
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.c rngs.o interface.o $(CFLAGS)
+	./randomtestadventurer >> randomtestresults.out
+	gcov -b dominion.c >> randomtestresults.out
 
 clean:
-	rm -f *.o playdom.exe playdom player player.exe cardtest1 cardtest1.exe cardtest2 cardtest2.exe cardtest3 cardtest3.exe cardtest4 cardtest4.exe unittest1 unittest1.exe unittest2 unittest2.exe unittest3 unittest3.exe unittest4 unittest4.c *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe unittestresults.out
+	rm -f *.o playdom.exe playdom player player.exe randomtestcard1 randomtestcard1.exe randomtestcard2 randomtestcard2.exe randomtestadventurer randomtestadventurer.exe *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe randomtestresults.out
