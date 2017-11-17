@@ -1388,7 +1388,7 @@ int outpostCard(struct gameState *state, int currentPlayer, int handPos)
   *  //discardCard(handPos, currentPlayer, state, 0);
   *********************************************************************************/    
   //discard card
-  //discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
 
