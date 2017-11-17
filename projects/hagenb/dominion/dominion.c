@@ -1386,9 +1386,10 @@ int outpostCard(struct gameState *state, int currentPlayer, int handPos)
   /*********************************************************************************
   * Bug introduced: The discardCard function was removed from outpostCard function
   *  //discardCard(handPos, currentPlayer, state, 0);
+  * Bug removed for assignment #5 11.17.17
   *********************************************************************************/    
   //discard card
-  //discardCard(handPos, currentPlayer, state, 0);
+  discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
 

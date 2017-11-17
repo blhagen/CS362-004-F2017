@@ -4,71 +4,71 @@ randomtestcard1.c
 
 Test #1: verify that state->outpostPlayed is incremented.
 
- Test 1 time: 0.270000.
+ Test 1 time: 0.150000.
 
 	>> Test #1 is COMPLETE. <<
 
 Test #2: calling outpostCard() will trigger the discardCard() function.
-	Card at handPos 0 = 1, expected = -1	FAIL
-	Card at handPos 4 = 0, expected = -1	FAIL
-	Card at handPos 4 = 0, expected = -1	FAIL
+	Card at handPos 1 = 4, expected = -1	FAIL
 	Card at handPos 3 = 0, expected = -1	FAIL
+	Card at handPos 0 = 4, expected = -1	FAIL
 	Card at handPos 2 = 4, expected = -1	FAIL
-	Card at handPos 4 = 0, expected = -1	FAIL
 	Card at handPos 1 = 0, expected = -1	FAIL
 	Card at handPos 3 = 0, expected = -1	FAIL
-	Card at handPos 2 = 0, expected = -1	FAIL
-	Card at handPos 3 = 4, expected = -1	FAIL
+	Card at handPos 2 = 4, expected = -1	FAIL
+	Card at handPos 3 = 0, expected = -1	FAIL
+	Card at handPos 0 = 4, expected = -1	FAIL
+	Card at handPos 4 = 0, expected = -1	FAIL
 
  Test 2 time: 0.000000.
 
 	 >> Test #2 is COMPLETE. << 
 
- Total testing time: 0.270000.
+ Total testing time: 0.150000.
 
  >>>>> SUCCESS: Testing complete outpost <<<<<
 
 File 'dominion.c'
-Lines executed:18.13% of 557
-Branches executed:20.96% of 415
-Taken at least once:12.77% of 415
-Calls executed:9.57% of 94
+Lines executed:20.61% of 558
+Branches executed:22.89% of 415
+Taken at least once:13.98% of 415
+Calls executed:10.53% of 95
 Creating 'dominion.c.gcov'
 
 randomtestcard2.c
 ----------------- Random Test for Card: smithy ----------------
 
 Test #1: verify that three cards were drawn.
+	HandCount for this player: 1
+	Cards drawn = -4, expected = 3	FAIL
+Number of players is 4, seed is 3785, thisPlayer is 2, bonus is 2, handPos is 0
 	HandCount for this player: 9
 	Cards drawn = 4, expected = 3	FAIL
-Number of players is 3, seed is 131, thisPlayer is 0, bonus is 7, handPos is 0
+Number of players is 2, seed is 527, thisPlayer is 0, bonus is 5, handPos is 3
+	HandCount for this player: 1
+	Cards drawn = -4, expected = 3	FAIL
+Number of players is 3, seed is 159, thisPlayer is 2, bonus is 10, handPos is 2
 	HandCount for this player: 9
 	Cards drawn = 4, expected = 3	FAIL
-Number of players is 2, seed is 2083, thisPlayer is 0, bonus is 7, handPos is 1
+Number of players is 2, seed is 1208, thisPlayer is 0, bonus is 10, handPos is 3
 	HandCount for this player: 1
 	Cards drawn = -4, expected = 3	FAIL
-Number of players is 4, seed is 2924, thisPlayer is 1, bonus is 4, handPos is 0
-	HandCount for this player: 1
-	Cards drawn = -4, expected = 3	FAIL
-Number of players is 3, seed is 4126, thisPlayer is 1, bonus is 7, handPos is 0
-	HandCount for this player: 1
-	Cards drawn = -4, expected = 3	FAIL
-Number of players is 4, seed is 2178, thisPlayer is 1, bonus is 5, handPos is 2
+Number of players is 4, seed is 4230, thisPlayer is 3, bonus is 0, handPos is 4
 	HandCount for this player: 9
 	Cards drawn = 4, expected = 3	FAIL
-Number of players is 2, seed is 527, thisPlayer is 0, bonus is 1, handPos is 1
-	HandCount for this player: 9
-	Cards drawn = 4, expected = 3	FAIL
-Number of players is 3, seed is 531, thisPlayer is 0, bonus is 10, handPos is 2
+Number of players is 3, seed is 3464, thisPlayer is 0, bonus is 6, handPos is 0
 	HandCount for this player: 1
 	Cards drawn = -4, expected = 3	FAIL
-Number of players is 3, seed is 3812, thisPlayer is 1, bonus is 2, handPos is 0
+Number of players is 4, seed is 4944, thisPlayer is 1, bonus is 1, handPos is 4
 	HandCount for this player: 1
 	Cards drawn = -4, expected = 3	FAIL
-Number of players is 4, seed is 310, thisPlayer is 1, bonus is 8, handPos is 3
+Number of players is 2, seed is 3392, thisPlayer is 1, bonus is 1, handPos is 4
 	HandCount for this player: 1
 	Cards drawn = -4, expected = 3	FAIL
-Number of players is 3, seed is 2812, thisPlayer is 1, bonus is 8, handPos is 1
+Number of players is 3, seed is 4896, thisPlayer is 2, bonus is 4, handPos is 0
+	HandCount for this player: 1
+	Cards drawn = -4, expected = 3	FAIL
+Number of players is 4, seed is 4499, thisPlayer is 1, bonus is 8, handPos is 0
 
  Test 1 time: 0.000000.
 
@@ -81,9 +81,19 @@ Test #2: calling smithy() will trigger the discardCard() function.
 
 
 	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 3 = 4, expected = -1	FAIL
+	Card at handPos 2 = 0, expected = -1	FAIL
+		Card at position 0 is ID 0
+
+
+	The card at the last handPos should be discarded, ie, == -1
+	Card at handPos 3 = 0, expected = -1	FAIL
+		Card at position 0 is ID 0
+
+
+	The card at the last handPos should be discarded, ie, == -1
+	Card at handPos 0 = 4, expected = -1	FAIL
 		Card at position 0 is ID 4
-		Card at position 1 is ID 4
+		Card at position 1 is ID 1
 		Card at position 2 is ID 4
 		Card at position 3 is ID 4
 		Card at position 4 is ID 4
@@ -99,35 +109,19 @@ Test #2: calling smithy() will trigger the discardCard() function.
 
 
 	The card at the last handPos should be discarded, ie, == -1
+	Card at handPos 0 = 0, expected = -1	FAIL
+		Card at position 0 is ID 0
+
+
+	The card at the last handPos should be discarded, ie, == -1
+	Card at handPos 1 = 0, expected = -1	FAIL
+		Card at position 0 is ID 0
+
+
+	The card at the last handPos should be discarded, ie, == -1
 	Card at handPos 4 = 4, expected = -1	FAIL
 		Card at position 0 is ID 4
-		Card at position 1 is ID 4
-		Card at position 2 is ID 4
-		Card at position 3 is ID 1
-		Card at position 4 is ID 4
-		Card at position 5 is ID 4
-		Card at position 6 is ID 4
-		Card at position 7 is ID 1
-		Card at position 8 is ID -1
-
-
-	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 1 = 4, expected = -1	FAIL
-		Card at position 0 is ID 4
-		Card at position 1 is ID 4
-		Card at position 2 is ID 4
-		Card at position 3 is ID 1
-		Card at position 4 is ID 4
-		Card at position 5 is ID 4
-		Card at position 6 is ID 4
-		Card at position 7 is ID 1
-		Card at position 8 is ID -1
-
-
-	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 3 = 4, expected = -1	FAIL
-		Card at position 0 is ID 4
-		Card at position 1 is ID 4
+		Card at position 1 is ID 1
 		Card at position 2 is ID 4
 		Card at position 3 is ID 4
 		Card at position 4 is ID 4
@@ -138,22 +132,12 @@ Test #2: calling smithy() will trigger the discardCard() function.
 
 
 	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 0 = 0, expected = -1	FAIL
-		Card at position 0 is ID 0
-
-
-	The card at the last handPos should be discarded, ie, == -1
 	Card at handPos 3 = 0, expected = -1	FAIL
 		Card at position 0 is ID 0
 
 
 	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 0 = 0, expected = -1	FAIL
-		Card at position 0 is ID 0
-
-
-	The card at the last handPos should be discarded, ie, == -1
-	Card at handPos 2 = 0, expected = -1	FAIL
+	Card at handPos 4 = 0, expected = -1	FAIL
 		Card at position 0 is ID 0
 
 
@@ -167,406 +151,9 @@ Test #2: calling smithy() will trigger the discardCard() function.
  >>>>> SUCCESS: Testing complete smithy <<<<<
 
 File 'dominion.c'
-Lines executed:20.65% of 557
+Lines executed:20.61% of 558
 Branches executed:23.37% of 415
 Taken at least once:14.22% of 415
-Calls executed:11.70% of 94
-Creating 'dominion.c.gcov'
-
-randomtestadventurer.c
------------------ Random Test for Card: adventurer ----------------
-TEST 1: Verify that two cards are drawn and added to hand
-
-
- Test 1 time: 0.300000.
-
-	>> Test #1 is COMPLETE. <<
-
-TEST 2: Verify that treasure count is equal.
-Test 4 failed: Coppers = 7, expected = 4
-Test 5 failed: Coppers = 7, expected = 5
-Test 7 failed: Coppers = 7, expected = 4
-Test 10 failed: Coppers = 7, expected = 4
-Test 13 failed: Coppers = 7, expected = 5
-Test 18 failed: Coppers = 7, expected = 4
-Test 25 failed: Coppers = 7, expected = 4
-Test 27 failed: Coppers = 7, expected = 4
-Test 30 failed: Coppers = 7, expected = 5
-Test 31 failed: Coppers = 7, expected = 4
-Test 32 failed: Coppers = 7, expected = 4
-Test 35 failed: Coppers = 7, expected = 4
-Test 36 failed: Coppers = 7, expected = 4
-Test 38 failed: Coppers = 7, expected = 4
-Test 39 failed: Coppers = 7, expected = 4
-Test 46 failed: Coppers = 7, expected = 4
-Test 51 failed: Coppers = 7, expected = 4
-Test 54 failed: Coppers = 7, expected = 5
-Test 58 failed: Coppers = 7, expected = 5
-Test 59 failed: Coppers = 7, expected = 4
-Test 71 failed: Coppers = 7, expected = 4
-Test 76 failed: Coppers = 7, expected = 4
-Test 77 failed: Coppers = 7, expected = 4
-Test 79 failed: Coppers = 7, expected = 4
-Test 81 failed: Coppers = 7, expected = 4
-Test 85 failed: Coppers = 7, expected = 4
-Test 88 failed: Coppers = 7, expected = 5
-Test 89 failed: Coppers = 7, expected = 4
-Test 93 failed: Coppers = 7, expected = 4
-Test 100 failed: Coppers = 7, expected = 4
-Test 102 failed: Coppers = 7, expected = 4
-Test 103 failed: Coppers = 7, expected = 4
-Test 106 failed: Coppers = 7, expected = 4
-Test 108 failed: Coppers = 7, expected = 4
-Test 109 failed: Coppers = 7, expected = 4
-Test 120 failed: Coppers = 7, expected = 4
-Test 122 failed: Coppers = 7, expected = 4
-Test 124 failed: Coppers = 7, expected = 4
-Test 131 failed: Coppers = 7, expected = 4
-Test 132 failed: Coppers = 7, expected = 4
-Test 134 failed: Coppers = 7, expected = 4
-Test 141 failed: Coppers = 7, expected = 4
-Test 142 failed: Coppers = 7, expected = 4
-Test 144 failed: Coppers = 7, expected = 4
-Test 146 failed: Coppers = 7, expected = 4
-Test 147 failed: Coppers = 7, expected = 4
-Test 148 failed: Coppers = 7, expected = 5
-Test 149 failed: Coppers = 7, expected = 4
-Test 151 failed: Coppers = 7, expected = 5
-Test 153 failed: Coppers = 7, expected = 4
-Test 154 failed: Coppers = 7, expected = 5
-Test 156 failed: Coppers = 7, expected = 4
-Test 157 failed: Coppers = 7, expected = 4
-Test 158 failed: Coppers = 7, expected = 4
-Test 159 failed: Coppers = 7, expected = 4
-Test 161 failed: Coppers = 7, expected = 4
-Test 163 failed: Coppers = 7, expected = 4
-Test 166 failed: Coppers = 7, expected = 4
-Test 170 failed: Coppers = 7, expected = 5
-Test 171 failed: Coppers = 7, expected = 4
-Test 172 failed: Coppers = 7, expected = 4
-Test 173 failed: Coppers = 7, expected = 4
-Test 174 failed: Coppers = 7, expected = 4
-Test 178 failed: Coppers = 7, expected = 4
-Test 181 failed: Coppers = 7, expected = 4
-Test 183 failed: Coppers = 7, expected = 4
-Test 186 failed: Coppers = 7, expected = 4
-Test 189 failed: Coppers = 7, expected = 4
-Test 192 failed: Coppers = 7, expected = 4
-Test 195 failed: Coppers = 7, expected = 5
-Test 197 failed: Coppers = 7, expected = 5
-Test 199 failed: Coppers = 7, expected = 4
-Test 200 failed: Coppers = 7, expected = 4
-Test 201 failed: Coppers = 7, expected = 4
-Test 209 failed: Coppers = 7, expected = 4
-Test 215 failed: Coppers = 7, expected = 4
-Test 218 failed: Coppers = 7, expected = 4
-Test 224 failed: Coppers = 7, expected = 4
-Test 225 failed: Coppers = 7, expected = 4
-Test 226 failed: Coppers = 7, expected = 4
-Test 228 failed: Coppers = 7, expected = 5
-Test 230 failed: Coppers = 7, expected = 5
-Test 231 failed: Coppers = 7, expected = 4
-Test 238 failed: Coppers = 7, expected = 4
-Test 242 failed: Coppers = 7, expected = 4
-Test 244 failed: Coppers = 7, expected = 4
-Test 246 failed: Coppers = 7, expected = 4
-Test 248 failed: Coppers = 7, expected = 4
-Test 249 failed: Coppers = 7, expected = 4
-Test 253 failed: Coppers = 7, expected = 5
-Test 257 failed: Coppers = 7, expected = 5
-Test 261 failed: Coppers = 7, expected = 4
-Test 270 failed: Coppers = 7, expected = 4
-Test 272 failed: Coppers = 7, expected = 4
-Test 273 failed: Coppers = 7, expected = 4
-Test 274 failed: Coppers = 7, expected = 5
-Test 275 failed: Coppers = 7, expected = 5
-Test 278 failed: Coppers = 7, expected = 4
-Test 281 failed: Coppers = 7, expected = 4
-Test 282 failed: Coppers = 7, expected = 4
-Test 285 failed: Coppers = 7, expected = 4
-Test 287 failed: Coppers = 7, expected = 4
-Test 289 failed: Coppers = 7, expected = 4
-Test 290 failed: Coppers = 7, expected = 4
-Test 291 failed: Coppers = 7, expected = 5
-Test 297 failed: Coppers = 7, expected = 5
-Test 299 failed: Coppers = 7, expected = 4
-Test 302 failed: Coppers = 7, expected = 4
-Test 307 failed: Coppers = 7, expected = 4
-Test 308 failed: Coppers = 7, expected = 4
-Test 309 failed: Coppers = 7, expected = 4
-Test 310 failed: Coppers = 7, expected = 4
-Test 311 failed: Coppers = 7, expected = 4
-Test 313 failed: Coppers = 7, expected = 4
-Test 314 failed: Coppers = 7, expected = 4
-Test 318 failed: Coppers = 7, expected = 4
-Test 319 failed: Coppers = 7, expected = 5
-Test 320 failed: Coppers = 7, expected = 5
-Test 326 failed: Coppers = 7, expected = 5
-Test 327 failed: Coppers = 7, expected = 4
-Test 329 failed: Coppers = 7, expected = 4
-Test 334 failed: Coppers = 7, expected = 4
-Test 335 failed: Coppers = 7, expected = 5
-Test 336 failed: Coppers = 7, expected = 5
-Test 338 failed: Coppers = 7, expected = 4
-Test 339 failed: Coppers = 7, expected = 5
-Test 343 failed: Coppers = 7, expected = 4
-Test 344 failed: Coppers = 7, expected = 4
-Test 348 failed: Coppers = 7, expected = 4
-Test 350 failed: Coppers = 7, expected = 5
-Test 355 failed: Coppers = 7, expected = 5
-Test 357 failed: Coppers = 7, expected = 5
-Test 362 failed: Coppers = 7, expected = 4
-Test 367 failed: Coppers = 7, expected = 4
-Test 370 failed: Coppers = 7, expected = 4
-Test 375 failed: Coppers = 7, expected = 4
-Test 378 failed: Coppers = 7, expected = 5
-Test 379 failed: Coppers = 7, expected = 4
-Test 381 failed: Coppers = 7, expected = 4
-Test 387 failed: Coppers = 7, expected = 4
-Test 389 failed: Coppers = 7, expected = 4
-Test 390 failed: Coppers = 7, expected = 4
-Test 393 failed: Coppers = 7, expected = 4
-Test 394 failed: Coppers = 7, expected = 4
-Test 396 failed: Coppers = 7, expected = 4
-Test 401 failed: Coppers = 7, expected = 4
-Test 407 failed: Coppers = 7, expected = 5
-Test 408 failed: Coppers = 7, expected = 4
-Test 410 failed: Coppers = 7, expected = 4
-Test 413 failed: Coppers = 7, expected = 4
-Test 415 failed: Coppers = 7, expected = 4
-Test 418 failed: Coppers = 7, expected = 4
-Test 420 failed: Coppers = 7, expected = 4
-Test 429 failed: Coppers = 7, expected = 4
-Test 430 failed: Coppers = 7, expected = 4
-Test 431 failed: Coppers = 7, expected = 5
-Test 433 failed: Coppers = 7, expected = 4
-Test 434 failed: Coppers = 7, expected = 5
-Test 439 failed: Coppers = 7, expected = 4
-Test 443 failed: Coppers = 7, expected = 4
-Test 452 failed: Coppers = 7, expected = 4
-Test 453 failed: Coppers = 7, expected = 5
-Test 456 failed: Coppers = 7, expected = 4
-Test 460 failed: Coppers = 7, expected = 4
-Test 462 failed: Coppers = 7, expected = 4
-Test 466 failed: Coppers = 7, expected = 4
-Test 467 failed: Coppers = 7, expected = 4
-Test 470 failed: Coppers = 7, expected = 4
-Test 472 failed: Coppers = 7, expected = 5
-Test 473 failed: Coppers = 7, expected = 4
-Test 475 failed: Coppers = 7, expected = 4
-Test 479 failed: Coppers = 7, expected = 4
-Test 482 failed: Coppers = 7, expected = 4
-Test 485 failed: Coppers = 7, expected = 5
-Test 506 failed: Coppers = 7, expected = 4
-Test 509 failed: Coppers = 7, expected = 4
-Test 514 failed: Coppers = 7, expected = 4
-Test 516 failed: Coppers = 7, expected = 4
-Test 520 failed: Coppers = 7, expected = 4
-Test 522 failed: Coppers = 7, expected = 4
-Test 527 failed: Coppers = 7, expected = 4
-Test 528 failed: Coppers = 7, expected = 5
-Test 529 failed: Coppers = 7, expected = 4
-Test 530 failed: Coppers = 7, expected = 4
-Test 534 failed: Coppers = 7, expected = 5
-Test 535 failed: Coppers = 7, expected = 4
-Test 540 failed: Coppers = 7, expected = 4
-Test 546 failed: Coppers = 7, expected = 4
-Test 548 failed: Coppers = 7, expected = 4
-Test 549 failed: Coppers = 7, expected = 4
-Test 555 failed: Coppers = 7, expected = 4
-Test 556 failed: Coppers = 7, expected = 4
-Test 558 failed: Coppers = 7, expected = 4
-Test 559 failed: Coppers = 7, expected = 4
-Test 560 failed: Coppers = 7, expected = 4
-Test 563 failed: Coppers = 7, expected = 5
-Test 568 failed: Coppers = 7, expected = 4
-Test 570 failed: Coppers = 7, expected = 4
-Test 572 failed: Coppers = 7, expected = 4
-Test 578 failed: Coppers = 7, expected = 4
-Test 579 failed: Coppers = 7, expected = 5
-Test 582 failed: Coppers = 7, expected = 4
-Test 585 failed: Coppers = 7, expected = 4
-Test 589 failed: Coppers = 7, expected = 4
-Test 595 failed: Coppers = 7, expected = 4
-Test 598 failed: Coppers = 7, expected = 4
-Test 599 failed: Coppers = 7, expected = 4
-Test 603 failed: Coppers = 7, expected = 5
-Test 604 failed: Coppers = 7, expected = 4
-Test 607 failed: Coppers = 7, expected = 4
-Test 609 failed: Coppers = 7, expected = 4
-Test 611 failed: Coppers = 7, expected = 4
-Test 614 failed: Coppers = 7, expected = 4
-Test 615 failed: Coppers = 7, expected = 4
-Test 622 failed: Coppers = 7, expected = 4
-Test 624 failed: Coppers = 7, expected = 4
-Test 627 failed: Coppers = 7, expected = 4
-Test 631 failed: Coppers = 7, expected = 4
-Test 634 failed: Coppers = 7, expected = 4
-Test 635 failed: Coppers = 7, expected = 4
-Test 636 failed: Coppers = 7, expected = 4
-Test 637 failed: Coppers = 7, expected = 4
-Test 644 failed: Coppers = 7, expected = 4
-Test 646 failed: Coppers = 7, expected = 5
-Test 650 failed: Coppers = 7, expected = 4
-Test 652 failed: Coppers = 7, expected = 4
-Test 656 failed: Coppers = 7, expected = 4
-Test 657 failed: Coppers = 7, expected = 4
-Test 662 failed: Coppers = 7, expected = 4
-Test 666 failed: Coppers = 7, expected = 4
-Test 667 failed: Coppers = 7, expected = 4
-Test 668 failed: Coppers = 7, expected = 4
-Test 674 failed: Coppers = 7, expected = 4
-Test 675 failed: Coppers = 7, expected = 4
-Test 677 failed: Coppers = 7, expected = 4
-Test 684 failed: Coppers = 7, expected = 4
-Test 686 failed: Coppers = 7, expected = 4
-Test 690 failed: Coppers = 7, expected = 4
-Test 692 failed: Coppers = 7, expected = 4
-Test 695 failed: Coppers = 7, expected = 4
-Test 696 failed: Coppers = 7, expected = 4
-Test 698 failed: Coppers = 7, expected = 5
-Test 699 failed: Coppers = 7, expected = 4
-Test 700 failed: Coppers = 7, expected = 4
-Test 702 failed: Coppers = 7, expected = 4
-Test 704 failed: Coppers = 7, expected = 4
-Test 711 failed: Coppers = 7, expected = 4
-Test 712 failed: Coppers = 7, expected = 4
-Test 717 failed: Coppers = 7, expected = 4
-Test 718 failed: Coppers = 7, expected = 4
-Test 720 failed: Coppers = 7, expected = 4
-Test 725 failed: Coppers = 7, expected = 4
-Test 727 failed: Coppers = 7, expected = 5
-Test 731 failed: Coppers = 7, expected = 4
-Test 732 failed: Coppers = 7, expected = 4
-Test 733 failed: Coppers = 7, expected = 4
-Test 734 failed: Coppers = 7, expected = 4
-Test 735 failed: Coppers = 7, expected = 4
-Test 736 failed: Coppers = 7, expected = 4
-Test 739 failed: Coppers = 7, expected = 4
-Test 742 failed: Coppers = 7, expected = 4
-Test 743 failed: Coppers = 7, expected = 4
-Test 745 failed: Coppers = 7, expected = 4
-Test 746 failed: Coppers = 7, expected = 4
-Test 749 failed: Coppers = 7, expected = 4
-Test 751 failed: Coppers = 7, expected = 4
-Test 753 failed: Coppers = 7, expected = 4
-Test 755 failed: Coppers = 7, expected = 4
-Test 758 failed: Coppers = 7, expected = 5
-Test 762 failed: Coppers = 7, expected = 4
-Test 765 failed: Coppers = 7, expected = 4
-Test 766 failed: Coppers = 7, expected = 4
-Test 767 failed: Coppers = 7, expected = 4
-Test 769 failed: Coppers = 7, expected = 4
-Test 771 failed: Coppers = 7, expected = 4
-Test 773 failed: Coppers = 7, expected = 4
-Test 774 failed: Coppers = 7, expected = 4
-Test 778 failed: Coppers = 7, expected = 4
-Test 779 failed: Coppers = 7, expected = 4
-Test 786 failed: Coppers = 7, expected = 5
-Test 787 failed: Coppers = 7, expected = 4
-Test 789 failed: Coppers = 7, expected = 5
-Test 790 failed: Coppers = 7, expected = 4
-Test 791 failed: Coppers = 7, expected = 4
-Test 792 failed: Coppers = 7, expected = 4
-Test 795 failed: Coppers = 7, expected = 4
-Test 796 failed: Coppers = 7, expected = 4
-Test 797 failed: Coppers = 7, expected = 4
-Test 799 failed: Coppers = 7, expected = 4
-Test 800 failed: Coppers = 7, expected = 4
-Test 803 failed: Coppers = 7, expected = 5
-Test 804 failed: Coppers = 7, expected = 4
-Test 808 failed: Coppers = 7, expected = 4
-Test 809 failed: Coppers = 7, expected = 4
-Test 811 failed: Coppers = 7, expected = 4
-Test 812 failed: Coppers = 7, expected = 4
-Test 813 failed: Coppers = 7, expected = 4
-Test 815 failed: Coppers = 7, expected = 4
-Test 816 failed: Coppers = 7, expected = 4
-Test 817 failed: Coppers = 7, expected = 4
-Test 818 failed: Coppers = 7, expected = 4
-Test 822 failed: Coppers = 7, expected = 4
-Test 826 failed: Coppers = 7, expected = 5
-Test 827 failed: Coppers = 7, expected = 4
-Test 831 failed: Coppers = 7, expected = 4
-Test 832 failed: Coppers = 7, expected = 5
-Test 836 failed: Coppers = 7, expected = 4
-Test 844 failed: Coppers = 7, expected = 4
-Test 847 failed: Coppers = 7, expected = 4
-Test 848 failed: Coppers = 7, expected = 4
-Test 850 failed: Coppers = 7, expected = 4
-Test 852 failed: Coppers = 7, expected = 4
-Test 853 failed: Coppers = 7, expected = 5
-Test 854 failed: Coppers = 7, expected = 5
-Test 855 failed: Coppers = 7, expected = 4
-Test 857 failed: Coppers = 7, expected = 4
-Test 858 failed: Coppers = 7, expected = 4
-Test 859 failed: Coppers = 7, expected = 4
-Test 860 failed: Coppers = 7, expected = 4
-Test 867 failed: Coppers = 7, expected = 5
-Test 868 failed: Coppers = 7, expected = 4
-Test 871 failed: Coppers = 7, expected = 4
-Test 873 failed: Coppers = 7, expected = 4
-Test 874 failed: Coppers = 7, expected = 4
-Test 875 failed: Coppers = 7, expected = 5
-Test 876 failed: Coppers = 7, expected = 4
-Test 880 failed: Coppers = 7, expected = 5
-Test 882 failed: Coppers = 7, expected = 4
-Test 883 failed: Coppers = 7, expected = 4
-Test 884 failed: Coppers = 7, expected = 4
-Test 890 failed: Coppers = 7, expected = 4
-Test 891 failed: Coppers = 7, expected = 4
-Test 892 failed: Coppers = 7, expected = 4
-Test 902 failed: Coppers = 7, expected = 4
-Test 905 failed: Coppers = 7, expected = 5
-Test 908 failed: Coppers = 7, expected = 5
-Test 911 failed: Coppers = 7, expected = 4
-Test 912 failed: Coppers = 7, expected = 4
-Test 913 failed: Coppers = 7, expected = 5
-Test 915 failed: Coppers = 7, expected = 4
-Test 919 failed: Coppers = 7, expected = 5
-Test 920 failed: Coppers = 7, expected = 4
-Test 922 failed: Coppers = 7, expected = 4
-Test 924 failed: Coppers = 7, expected = 5
-Test 925 failed: Coppers = 7, expected = 4
-Test 926 failed: Coppers = 7, expected = 4
-Test 928 failed: Coppers = 7, expected = 4
-Test 933 failed: Coppers = 7, expected = 4
-Test 937 failed: Coppers = 7, expected = 5
-Test 943 failed: Coppers = 7, expected = 4
-Test 944 failed: Coppers = 7, expected = 4
-Test 947 failed: Coppers = 7, expected = 4
-Test 955 failed: Coppers = 7, expected = 4
-Test 956 failed: Coppers = 7, expected = 4
-Test 959 failed: Coppers = 7, expected = 5
-Test 961 failed: Coppers = 7, expected = 5
-Test 963 failed: Coppers = 7, expected = 4
-Test 965 failed: Coppers = 7, expected = 4
-Test 966 failed: Coppers = 7, expected = 4
-Test 967 failed: Coppers = 7, expected = 4
-Test 968 failed: Coppers = 7, expected = 5
-Test 969 failed: Coppers = 7, expected = 4
-Test 970 failed: Coppers = 7, expected = 4
-Test 971 failed: Coppers = 7, expected = 4
-Test 974 failed: Coppers = 7, expected = 4
-Test 978 failed: Coppers = 7, expected = 5
-Test 983 failed: Coppers = 7, expected = 4
-Test 986 failed: Coppers = 7, expected = 4
-Test 987 failed: Coppers = 7, expected = 5
-Test 994 failed: Coppers = 7, expected = 4
-Test 1000 failed: Coppers = 7, expected = 4
-
- Test 2 time: 0.000000.
-
-	 >> Test #2 is COMPLETE. << 
-
- Total testing time: 0.300000.
-
- >>>>> SUCCESS: Testing complete adventurer <<<<<
-
-File 'dominion.c'
-Lines executed:22.26% of 557
-Branches executed:26.27% of 415
-Taken at least once:16.87% of 415
-Calls executed:11.70% of 94
+Calls executed:11.58% of 95
 Creating 'dominion.c.gcov'
 

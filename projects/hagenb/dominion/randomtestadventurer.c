@@ -160,7 +160,7 @@ int main()
 		memcpy(&testG, &G, sizeof(struct gameState));
 		
 		//adventurerCard(&G, thisPlayer, 2, 1, 1);	
-		cardEffect(steward, choice1, choice2, choice3, &testG, handPos, &bonus);
+		cardEffect(adventurer, choice1, choice2, choice3, &testG, handPos, &bonus);
 
 		// //G.drawntreasure = 2;
 		// G.handCount[thisPlayer] =+ 2;
@@ -194,7 +194,6 @@ int main()
 		thisPlayer = getThisPlayer(numPlayers);
 		bonus = getBonus();
 		handPos = getHandPos();
-
 		// copy the game state to a test case
 		memcpy(&testG, &G, sizeof(struct gameState));
 		
