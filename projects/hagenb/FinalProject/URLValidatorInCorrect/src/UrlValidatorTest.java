@@ -36,14 +36,40 @@ public class UrlValidatorTest extends TestCase {
       super(testName);
    }
 
-   
+   private static final String[] MANUAL_TEST_URLS = new String[] {
+			"http://foo.com",					//benign test case
+			"http://foo3.com/123/hellow0rld",	//numbers in hostname, path
+			"http://foo.com/blah_bla*h/",		//'safe' characters in path
+			"http://foo.com/blah_bla*h(paren)_(paren)/",		//more 'safe' characters in path
+			"http://foo.com/0123$-_.+!/*|(),/",			//safe characters - fail
+			"http://foo.com/\"%<>\\^`{|}",		// unsafe characters in path
+			"HTTP://WWW.FOO.COM",				//all caps
+			" http://foo.com",					//add space before scheme
+			"hello://foo.com",					// random scheme name
+			"ht!tp://foo.com",					//non alphanumeric in scheme
+			"http://f oo.com",					//space within URL
+			"http://foo.com ",					//trailing space
+			"http://223.255.255.254",			//DNS format
+			"http://foo.com/?q=testquery",		//add simple query section
+			"http://foo.bar/?q=Test%20URLencoded%20stuff",	//URLencoded - fail
+			// very long and complicated path (fail):			
+			"http://foo:bar@w1.superman.com/very/long/path.html?p1=v1&p2=v2#more-details",
+			"http://foo.com/a#b#c#",				// fragments
+			"http://foo.com/a#b c#",				// space in fragements
+			"ftp://ftp.rfc-editor.org/",			//ftp 
+			"gopher://floodgap.com"				//gopher scheme
+	};
    
    public void testManualTest()
    {
-	   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
-	   System.out.println(urlVal.isValid("http://www.amazon.com"));
-	   
-	   
+	   for(int i = 0; i < MANUAL_TEST_URLS.length; i++)
+	   {
+		   UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+		   System.out.println(MANUAL_TEST_URLS[i]);
+		   System.out.println(urlVal.isValid(MANUAL_TEST_URLS[i]));
+		   System.out.println();
+	   }
+	     
    }
    
    
