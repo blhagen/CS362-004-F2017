@@ -35,7 +35,7 @@ char inputChar()
 }
 
 /************************************************************************************
-  Function: inputChar
+  Function: inputString
   Parameters: none
   Description:
   Calling the inputString() function generates a randome string that is six characters
